@@ -1,0 +1,43 @@
+body {
+  background-color: #DDDDDD;
+}
+
+#left-column{
+  float: left;
+  background-color: #001f3f;
+
+}
+
+#right-column{
+  float: left;
+  background-color: #FF4136;
+  background-size:auto;
+
+}
+
+#footer{
+  font-family:sans-serif;
+  color: white;
+  background-color: #3D9970;
+  position: absolute;
+  bottom: 0px;
+  width: 100%
+}
+
+.column{
+  color: white;
+  width:50%;
+  height:350px;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  padding-left: 50px;
+}
+
+ul{
+  font-family: sans-serif;
+  font-size: 15px;
+  padding-left: 100px;
+}
