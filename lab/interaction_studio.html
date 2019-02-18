@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Core Studio Interaction</title>
+
+	<style>
+		html{
+			font-family: arial;
+			color: white;
+			box-sizing: border-box;
+		}
+
+		.row{
+			display: flex;
+			height: 100vw;
+
+		}
+
+		#left-column{
+			float: left;
+    		width: 50%;
+    		overflow: fixed;
+		}
+
+		#right-column{
+			float: right;
+    		width: 50%;
+    		overflow: scroll;
+		}
+
+		h1{
+			position: fixed;
+			padding-left: 5vw;
+		}
+
+		h2{
+			position: fixed;
+			font-size: 2.3vh;
+			padding-left: 5vw;
+			top: 10vh;
+	
+		}
+	</style>
 </head>
+
 <body>
+
+	<div class="row">
+		<div id="left-column" style="background-color: #AB9999"></div>
+			<h1>Projects</h1>
+			<h2> Dialogue(The Brand New Testament)</h2>
+		<div id="right-column" style="background-color: #dddddd"></div>
+	</div>
 
 </body>
 </html>
