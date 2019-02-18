@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let's drink some water!</title>
+</head>
+
+<style>
+
+html{
+	background-color: #C6B3BE;
+}
+
+.drink{
+	position: fixed;
+	animation-name: animate;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	padding-left: 40vw;
+	display: inline-block;
+}
+
+@keyframes animate{
+	0% {bottom: 0; height: 250px;}
+	25% {bottom: 160px;}
+	50% {bottom: 0;}
+	75% {bottom: 100px;}
+	100% {bottom: 0;}
+}
+
+.drink2{
+	position: fixed;
+	animation-name: animate;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	padding-left: 50vw;
+	display: inline-block;
+}
+
+@keyframes animate{
+	0% {bottom: 0; height: 300px;}
+	25% {bottom: 200px;}
+	50% {bottom: 0;}
+	75% {bottom: 100px;}
+	100% {bottom: 0;}
+}
+
+.drink3{
+	position: fixed;
+	animation-name: animate;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	padding-left: 20vw;
+	display: inline-block;
+}
+
+@keyframes animate{
+	0% {bottom: 0; height: 200px;}
+	25% {bottom: 100px;}
+	50% {bottom: 0;}
+	75% {bottom: 75px;}
+	100% {bottom: 0;}
+}
+
+</style>
+
+<body>
+<img src="drink.png" class="drink" style="width: 5vw; height: 5vw">
+<img src="drink2.png" class="drink2" style="width: 15vw; height: 15vw">
+<img src="drink3.png" class="drink3" style="width: 10vw; height: 10vw">
+</body>
+</html>
