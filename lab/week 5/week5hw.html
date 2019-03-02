@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weaving.</title>
+	
+	<style>
+		#im1{
+			position: fixed;
+		}
+	</style>
+</head>
+<body>
+	<img src="img1.jpg" id="img1" height="100%" width="100%" onclick="change()">
+
+</body>
+
+<script>
+
+	var imgList = ["img0.jpg", "img1.jpg", "img2.jpg", "img3.jpg"];
+	var counter = 0;
+
+	console.log("ready");
+
+	function change(){
+		var image = document.getElementById("img1");
+		var url = imgList[counter];
+		var limit = imgList.length;
+
+		counter++;
+
+		image.src = url;
+
+		if(counter == limit){
+			counter = 0;
+		}
+	}
+
+</script>
+
+</html>

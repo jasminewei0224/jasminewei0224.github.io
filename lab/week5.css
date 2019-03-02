@@ -1,0 +1,13 @@
+body,html{
+	font-size: 20px;
+}
+
+#colorDiv{
+	transition: color 2s;
+}
+
+.text-color{
+	color: red;
+	/*transition: color 2s;*/
+}
+

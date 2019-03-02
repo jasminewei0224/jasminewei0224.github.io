@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My playground.</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+	
+	html{
+		background-color: #CEE9EA;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+	}
+
+	.about{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: #FAF1D7;
+		position: fixed;
+		top:90%;
+	}
+
+	a:hover {
+		background-color: #F8D4AE;
+	}
+
+	.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+	}
+	.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+	}
+	.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+	}
+	.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+	}
+	.popupCloseButton:hover {
+    background-color: #ccc;
+	}
+	.about {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+	}
+
+	.p{
+		font-family: arial;
+	}
+
+	.horse{
+		display: inline-block;
+		position: fixed; 
+		left: 68%;
+		top: 20%;
+	}
+
+	.tube{
+		display: inline-block;
+		position: fixed; 
+		left: 60%;
+		top: 53%;
+	}
+
+	.chip{
+		display: inline-block;
+		position: fixed; 
+		left: 72%;
+		top: 30%;
+	}
+
+	.swing{
+		display: inline-block;
+		position: fixed; 
+		left: 47%;
+		top: 27%;
+	}
+
+	.fish{
+		display: inline-block;
+		position: fixed; 
+		left: 50%;
+		top: 75%;
+	}
+
+	.spin{
+		display: inline-block;
+		position: fixed; 
+		left: 37%;
+		top: 45%;
+	}
+</style>
+
+
+</head>
+<body>
+
+	
+</body>
+	
+	<a class="about"></a>
+	<div class="hover_bkgr_fricc">
+    	<span class="helper"></span>
+    	<div>
+        	<div class="popupCloseButton">X</div>
+        	<p>Welcome to a digital playground.</br>I suggest you to turn on the volumne to experience it.</br>Try and click on every object to see what will happen.</br>P.S. You might want to try clicking on different object together.
+        	</p>
+    		</div>
+		</div>
+
+	<div class="horse">
+		<img src="horse-01.png" type="png" height="250vh" width="auto" class="horseVideo">
+		<audio src="horse.mp3" type="mp3" class="horseAudio"></audio>
+	</div> 
+
+	<div class="tube">
+		<img src="tube-01.png" type="png" height="300vh" width="auto" class="tubeVideo">
+		<audio src="tube.mp3" type="mp3" class="tubeAudio" ></audio>
+	</div>
+
+	<div class="chip">
+		<img src="chip-01.png" type="png" height="400vh" width="auto" loop="loop" class="chipVideo">
+		<audio src="chip.mp3" type="mp3" class="chipAudio" ></audio>
+	</div>
+
+	<div class="swing">
+		<img src="swing-01.png" type="png" height="270vh" width="auto" loop="loop" class="swingVideo">
+		<audio src="swing.mp3" type="mp3" class="swingAudio" ></audio>
+
+	<div class="fish">
+		<img src="fish-01.png" type="png" height="150vh" width="auto" loop="loop" class="fishVideo">
+		<audio src="fish.mp3" type="mp3" class="fishAudio" ></audio>
+
+	</div>
+		
+	<div class="spin">
+		<img src="spin-01.png" type="png" height="150vh" width="auto" loop="loop" class="spinVideo">
+		<audio src="spin.mp3" type="mp3" class="spinAudio" ></audio>
+
+	</div>
+	
+	<div></div>
+
+<script>
+	console.log("ready")
+
+	
+    $(".about").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+
+
+	// $("video").removeAttr("autoplay");
+
+	//$(".horse").mouseover(function(){
+	//	$(".horseVideo")[0].play();
+	//})
+
+	//$(".horse").mouseout(function(){
+	//	$(".horseVideo")[0].pause();
+	//	$(".horseVideo")[0].currentTime = 0;
+	//})
+
+	$(".horse").mouseover(function() {
+  	$(".horseVideo").attr('src', 'horse.gif');
+	});
+
+
+	$(".horse").click(function(){
+		$(".horseAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".tube").mouseover(function() {
+  	$(".tubeVideo").attr('src', 'tube.gif');
+	});
+
+	$(".tube").click(function(){
+		$(".tubeAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".chip").mouseover(function() {
+  	$(".chipVideo").attr('src', 'chip.gif');
+	});
+
+	$(".chip").click(function(){
+		$(".chipAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".swing").mouseover(function() {
+  	$(".swingVideo").attr('src', 'swing.gif');
+	});
+
+	$(".swing").click(function(){
+		$(".swingAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".fish").mouseover(function() {
+  	$(".fishVideo").attr('src', 'fish.gif');
+	});
+
+	$(".fish").click(function(){
+		$(".fishAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".spin").mouseover(function() {
+  	$(".spinVideo").attr('src', 'spin.gif');
+	});
+
+	$(".spin").click(function(){
+		$(".spinAudio")[0].play();
+	});
+
+</script>
+</html>
