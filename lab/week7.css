@@ -1,0 +1,13 @@
+*{
+	font-size: 30px;
+}
+
+li{
+	font-family: arail;
+	font-style: italic;
+}
+
+.myaddedListElement{
+	color: blue;
+	font-size:45px;
+}
