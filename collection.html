@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>My playground.</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -12,6 +14,8 @@
 		margin: 0;
 		padding: 0;
 	}
+
+		
 
 	.about{
 		width: 30px;
@@ -80,73 +84,264 @@
     	background-color: #ccc;
 	}
 
+
+	.soundOn{
+		display: block;
+		position: fixed; 
+		width: 30px;
+		margin: 20px;
+		top: 85%;
+	}
+
+	/*.soundOn:hover +.soundOnText{
+	
+		display: block;
+	}*/
+
+	/*@keyframes sound-on-animation{
+		0% {opacity: 0;}
+		100%{opacity: 1;}
+	}*/
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+	.popuptext{
+			color: white;
+			font-size: 8%;
+			font-family: arial;
+			display: block;
+			position: fixed; 
+			top: 89%;
+			margin-left: 60px;
+			transition: 2s ease;
+	}
+
 	p{
 		font-family: arial;
 		color: #FDAFAB;
 	}
 
-	.horse{
-		display: inline-block;
+	.horse .horseVideo{
+		display: block;
 		position: fixed; 
 		left: 60%;
 		top: 10%;
+		width: 10%;
 	}
 
-	.tube{
-		display: inline-block;
+	.tube .tubeVideo{
+		display: block;
 		position: fixed; 
 		left: 52%;
 		top: 38%;
+		width: 15%;
 	}
 
-	.chip{
-		display: inline-block;
+	.chip .chipVideo{
+		display: block;
 		position: fixed; 
 		left: 62%;
 		top: 18%;
+		width: 18%;
 	}
 
-	.swing{
-		display: inline-block;
+	.swing .swingVideo{
+		display: block;
 		position: fixed; 
 		left: 43%;
 		top: 18%;
+		width: 15%;
 	}
 
-	.fish{
-		display: inline-block;
+	.fish .fishVideo{
+		display: block;
 		position: fixed; 
 		left: 42%;
 		top: 60%;
+		width: 9%;
 	}
 
-	.spin{
-		display: inline-block;
+	.spin .spinVideo{
+		display: block;
 		position: fixed; 
 		left: 33%;
 		top: 38%;
+		width: 10%;
 	}
 
-	.banana{
-		display: inline-block;
+	.banana .bananaVideo{
+		display: block;
 		position: fixed; 
 		left: 28%;
 		top: 11%;
+		width: 13%;
 	}
 
-	.cube{
-		display: inline-block;
+	.cube .cubeVideo{
+		display: block;
 		position: fixed; 
 		left: 70%;
 		top: 60%;
+		width: 13%;
 	}
 
-	.seesaw{
-		display: inline-block;
+	.seesaw .seesawVideo{
+		display: block;
 		position: fixed; 
 		left: 52%;
 		top: 65%;
+		width: 15%;
 	}
+
+	.ship .shipVideo{
+		display: block;
+		position: fixed; 
+		left: 30%;
+		top: 65%;
+		width: 15%;
+	}
+
+	.string .stringVideo{ 
+		display: block;
+		position: fixed; 
+		left: 15%;
+		top: 35%;
+		width: 16%;
+	}
+
+
+	@media(max-width: 768px) {
+
+		.horse .horseVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 25%;
+		}
+  		.banana .bananaVideo{
+			display: inline-block;
+			position: fixed; 
+			left: 10%;
+			top: 11%;
+			width: 30%;
+		}
+
+		.tube .tubeVideo{
+			display: inline-block;
+			position: fixed; 
+			left: 50%;
+			top: 45%;
+			width: 30%;
+		}
+
+		.chip .chipVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 30%;
+			top: 25%;
+		}
+
+		.swing .swingVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 25%;
+			left: 37%;
+			top: 20%;
+		}
+
+		.fish .fishVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 23%;
+			top: 80%;
+		}
+
+		.spin .spinVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 23%;
+			top: 
+		}
+
+		.seesaw .seesawVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 30%;
+			left: 40%; 
+		}
+
+		.string .stringVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 35%;
+			left: 4%;
+		}
+
+		.ship .shipVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 35%;
+			left: 10%;
+			top: 55%;
+		}
+
+		.cube .cubeVideo{
+			display: inline-block;
+			position: fixed; 
+			width: 23%;
+		}
+
+
+	}
+
+	/*
+	
+		- @media queries should be at the end of your css
+		- height and width of images should be in your css instead of in the html. if the height and width are in the css, you can use a media query to change their size
+		- make sure when you're defining the height and width, that you're targeting the actual image
+
+	*/
+
 </style>
 
 
@@ -166,50 +361,66 @@
     		</div>
 		</div>
 
+		<div class="popup" onclick="myFunction()">
+			<img src="soud-on-icon.png" class="soundOn">
+			<div class="popuptext" id="mypopup">Sound on!</div>
+		</div>
+			
+
 	<div class="horse">
-		<img src="horse-01.png" type="png" height="190vh" width="auto" class="horseVideo">
+		<img src="horse-01.png" type="png" class="horseVideo">
 		<audio src="horse.mp3" type="mp3" class="horseAudio"></audio>
 	</div> 
 
 	<div class="tube">
-		<img src="tube-01.png" type="png" height="300vh" width="auto" class="tubeVideo">
+		<img src="tube-01.png" type="png" class="tubeVideo">
 		<audio src="tube.mp3" type="mp3" class="tubeAudio" ></audio>
 	</div>
 
 	<div class="chip">
-		<img src="chip-01.png" type="png" height="320vh" width="auto" loop="loop" class="chipVideo">
+		<img src="chip-01.png" type="png" loop="loop" class="chipVideo">
 		<audio src="chip.mp3" type="mp3" class="chipAudio" ></audio>
 	</div>
 
 	<div class="swing">
-		<img src="swing-01.png" type="png" height="250vh" width="auto" loop="loop" class="swingVideo">
+		<img src="swing-01.png" type="png" loop="loop" class="swingVideo">
 		<audio src="swing.mp3" type="mp3" class="swingAudio" ></audio>
 
 	<div class="fish">
-		<img src="fish-01.png" type="png" height="150vh" width="auto" loop="loop" class="fishVideo">
+		<img src="fish-01.png" type="png" loop="loop" class="fishVideo">
 		<audio src="fish.mp3" type="mp3" class="fishAudio" ></audio>
 
 	</div>
 		
 	<div class="spin">
-		<img src="spin-01.png" type="png" height="150vh" width="auto" loop="loop" class="spinVideo">
+		<img src="spin-01.png" type="png" loop="loop" class="spinVideo">
 		<audio src="spin.mp3" type="mp3" class="spinAudio" ></audio>
 
 	</div>
 	
 	<div class="banana">
-		<img src="banana-01.png" type="png" height="250vh" width="auto" loop="loop" class="bananaVideo">
+		<img src="banana-01.png" type="png" loop="loop" class="bananaVideo">
 		<audio src="banana.mp3" type="mp3" class="bananaAudio" ></audio>
 	</div>
 
 	<div class="cube">
-		<img src="cube-01.png" type="png" height="190vh" width="auto" loop="loop" class="cubeVideo">
+		<img src="cube-01.png" type="png" loop="loop" class="cubeVideo">
 		<audio src="cube.mp3" type="mp3" class="cubeAudio" ></audio>
 	</div>
 
 	<div class="seesaw">
-		<img src="seesaw-01.png" type="png" height="250vh" width="auto" loop="loop" class="seesawVideo">
+		<img src="seesaw-01.png" type="png" loop="loop" class="seesawVideo">
 		<audio src="seesaw.mp3" type="mp3" class="seesawAudio" ></audio>
+	</div>
+
+	<div class="ship">
+		<img src="ship-01.png" type="png" loop="loop" class="shipVideo">
+		<audio src="ship.mp3" type="mp3" class="shipAudio" ></audio>
+	</div>
+
+	<div class="string">
+		<img src="string-01.png" type="png" loop="loop" class="stringVideo">
+		<audio src="string.mp3" type="mp3" class="stringAudio" ></audio>
 	</div>
 
 <script>
@@ -226,28 +437,27 @@
         $('.hover_bkgr_fricc').hide();
     });
 
+//////////////////
 
-	// $("video").removeAttr("autoplay");
+	// function myFunction(){
+	// 	console.log("hi")
+	// 	var popup = document.getElementByID("mypopup");
+	// 	popup.classLit.toggle("show");
+	// }
 
-	//$(".horse").mouseover(function(){
-	//	$(".horseVideo")[0].play();
-	//})
-
-	//$(".horse").mouseout(function(){
-	//	$(".horseVideo")[0].pause();
-	//	$(".horseVideo")[0].currentTime = 0;
-	//})
+	// $(".sound-on-function").click(function(){
+	// 	if(".sound-on-function".style.display ! == "block"){
+	// 		".sound-on-function".style.display = "block";
+	// 	}
+	// 	else{
+	// 		".sound-on-function".style.display = "none";
+	// 	}
+	// });
+	
 
 	$(".horse").mouseover(function() {
   	$(".horseVideo").attr('src', 'horse.gif');
 	});
-
-
-	// $(".horse").mouseout(function() {
-	// $(".horseVideo").attr('src', 'horse.png');
-	// $(".horseVideo").attr('type', 'png');
-	// });
-
 
 	$(".horse").click(function(){
 		$(".horseAudio")[0].play();
@@ -331,6 +541,26 @@
 
 	$(".seesaw").click(function(){
 		$(".seesawAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".ship").mouseover(function() {
+  	$(".shipVideo").attr('src', 'ship.gif');
+	});
+
+	$(".ship").click(function(){
+		$(".shipAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".string").mouseover(function() {
+  	$(".stringVideo").attr('src', 'string.gif');
+	});
+
+	$(".string").click(function(){
+		$(".stringAudio")[0].play();
 	});
 </script>
 </html>
