@@ -15,8 +15,6 @@
 		padding: 0;
 	}
 
-		
-
 	.about{
 		width: 30px;
 		height: 30px;
@@ -52,7 +50,7 @@
 	}
 	.hover_bkgr_fricc > div {
     	background-color: #CEE9EA;
-    	box-shadow: 10px 10px 60px #555;
+    	/*box-shadow: 10px 10px 60px #555;*/
     	display: inline-block;
     	height: auto;
     	max-width: 551px;
@@ -60,7 +58,7 @@
     	vertical-align: middle;
     	width: 60%;
     	position: relative;
-    	border-radius: 8px;
+    	border-radius: 15px;
     	padding: 15px 5%;
 	}
 	.popupCloseButton {
@@ -80,17 +78,49 @@
     	height: 30px;
     	text-align: center;
 	}
+
+	.popupCloseButton{
+		color: #999;
+	}
+
 	.popupCloseButton:hover {
-    	background-color: #ccc;
+    	background-color: #CEE9EA;
 	}
 
 
-	.soundOn{
+	.soundon{
 		display: block;
 		position: fixed; 
 		width: 30px;
 		margin: 20px;
 		top: 85%;
+	}
+
+	.popuptext{
+		visibility: hidden;
+		color: white;
+		font-size: 30px;
+		font-family: arial;
+		display: block;
+		position: fixed; 
+		top: 89%;
+		margin-left: 60px;
+		
+		transition: opacity 1s;
+	}
+
+	.soundon:hover .popuptext{
+		visibility: visible;
+		opacity: 1;
+		color: white;
+		font-size: 30px;
+		font-family: arial;
+		display: block;
+		position: fixed; 
+		top: 89%;
+		margin-left: 60px;
+		
+		transition: opacity 1s;
 	}
 
 	/*.soundOn:hover +.soundOnText{
@@ -103,59 +133,6 @@
 		100%{opacity: 1;}
 	}*/
 
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-	.popuptext{
-			color: white;
-			font-size: 8%;
-			font-family: arial;
-			display: block;
-			position: fixed; 
-			top: 89%;
-			margin-left: 60px;
-			transition: 2s ease;
-	}
 
 	p{
 		font-family: arial;
@@ -250,6 +227,24 @@
 		width: 16%;
 	}
 
+	.fart{
+		background-color: #CEE9EA;
+		width: 10%;
+		height: 10%;
+		display: block;
+		position: fixed; 
+		left: 20%;
+		top: 11%;
+		
+	}
+
+	.frog .frogVideo{
+		display: block;
+		position: fixed; 
+		left: 22%;
+		top: 60%;
+		width: 12%;
+	}
 
 	@media(max-width: 768px) {
 
@@ -331,7 +326,21 @@
 			width: 23%;
 		}
 
+		.fart{
+			display: inline-block;
+			position: fixed; 
+			width: 10%;
+			height: 10%;
+			top: 5%;
+		}
 
+		.frog .frogVideo{
+		display: block;
+		position: fixed; 
+		left: 17%;
+		top: 70%;
+		width: 28%;
+		}
 	}
 
 	/*
@@ -361,10 +370,12 @@
     		</div>
 		</div>
 
-		<div class="popup" onclick="myFunction()">
-			<img src="soud-on-icon.png" class="soundOn">
-			<div class="popuptext" id="mypopup">Sound on!</div>
+		<div class="hover">
+			<img src="soud-on-icon.png" class="soundon">
+			<span class="popuptext">Sound on!</span>
 		</div>
+			
+		
 			
 
 	<div class="horse">
@@ -423,6 +434,15 @@
 		<audio src="string.mp3" type="mp3" class="stringAudio" ></audio>
 	</div>
 
+	<div class="fart">
+		<audio src="fart.mp3" type=mp3"" class="fartAudio"></audio>
+	</div>
+
+	<div class="frog">
+		<img src="frog-01.png" type="png" loop="loop" class="frogVideo">
+		<audio src="frog.mp3" type="mp3" class="frogAudio" ></audio>
+	</div>
+
 <script>
 	console.log("ready")
 
@@ -438,22 +458,6 @@
     });
 
 //////////////////
-
-	// function myFunction(){
-	// 	console.log("hi")
-	// 	var popup = document.getElementByID("mypopup");
-	// 	popup.classLit.toggle("show");
-	// }
-
-	// $(".sound-on-function").click(function(){
-	// 	if(".sound-on-function".style.display ! == "block"){
-	// 		".sound-on-function".style.display = "block";
-	// 	}
-	// 	else{
-	// 		".sound-on-function".style.display = "none";
-	// 	}
-	// });
-	
 
 	$(".horse").mouseover(function() {
   	$(".horseVideo").attr('src', 'horse.gif');
@@ -561,6 +565,22 @@
 
 	$(".string").click(function(){
 		$(".stringAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".fart").click(function(){
+		$(".fartAudio")[0].play();
+	});
+
+//////////////////
+
+	$(".frog").mouseover(function() {
+  	$(".frogVideo").attr('src', 'frog.gif');
+	});
+
+	$(".frog").click(function(){
+		$(".frogAudio")[0].play();
 	});
 </script>
 </html>
