@@ -5,17 +5,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 
-	.top_block{
+/*	.top_block{
 		background-color: #AB9999;
 		width: 100%;
-		height: 25%;
+		height: 15%;
 		margin: 0;
 		padding: 0;
 		display: block;
 		position: fixed;
 		left: 0;
 		font-family: Arial;
-	}
+	}*/
 
 	.text-block{
 		position: absolute;
@@ -51,13 +51,14 @@
 	}
 
 	.video{
-		position: relative;
-		top: 20vh;
+		position: fixed;
+		top: 34%;
+		left: 33%;
 		/*right: 50vw;
 		left: 50vw;*/
 		text-align: center;
-		/*display: block;*/
-		border: transparent;
+		z-index: 1;
+		display: block;
 	}
 
 	h1{
@@ -84,6 +85,11 @@
 		/*padding-left: 50vw;*/
 	}
 
+	body{
+		margin: 0;
+		padding: 0;
+	}
+
 	h3{
 		font-family: Arial;
 		color: white;
@@ -96,7 +102,62 @@
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
+		z-index: 2;
+		font-family: arial;
 	}
+
+	.texture{
+		position: fixed;
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	.flower{
+		display: none;
+		left: 30vw;
+		top: 60vh;
+	}
+
+	.video{
+		z-index: 2;
+	}
+
+	#sidebar{
+		position: fixed;
+		width: 220px;
+		height: 100%;
+		background-color: #AB9999;
+		left: -220px;
+		transition: all 500ms linear;
+	}
+
+	#sidebar.active{
+		left: 0px;
+	}
+
+	#sidebar ul li{
+		color: #dddddd;
+		list-style: none;
+		padding: 15px 10px;
+	}
+
+	#sidebar .toggle-btn{
+		position: absolute;
+		left: 250px;
+		top: 20px;
+	}
+	
+	#sidebar .toggle-btn span{
+		display: block;
+		width: 30px;
+		height: 5px;
+		background: #AB9999;
+		margin: 5px 0 ;
+		border-radius: 5px;
+	}
+
+
 
 </style>
 
@@ -104,22 +165,43 @@
 </head>
 
 <body>
-<div class="top_block">
-<!-- <div class="container"> -->
-	<div class="text-block">
-		<h1>JASMINE WEI</h1>
+	<div id="sidebar">
+		<div class="toggle-btn" onclick="toggleSidebar()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul>
+			<li>Home</li>
+			<li id="studio">
+				<a href="interaction_studio.html">
+				Interaction Studio
+				</a>
+			</li>
+			<li id="lab">
+				<a href="interaction_lab.html">
+				Interaction Lab
+				</a>
+			</li>
+		</ul>
+		
 	</div>
 
-	<div class="text-block-2">
+
+	<!-- <div class="text-block-2">
 		<h2> 
 		<a href="interaction_studio.html">Interaction studio</a>    
 		<a href="interaction_lab.html">Interaction lab</a>
 		</h2>
-	</div>
-<!-- </div> -->
+	</div> -->
+
+	<!-- <img src="45-degree-fabric-light.png" type="png" class="texture"> -->
+	<img src="flower-white.png" type="png" class="flower" width="70vw">
+
+	
 </div>
 	
-	<h1>
+	<!-- <h1>
 		<div id="title">Hi, I'm Jasmine!</div>
 	</h1>
 
@@ -128,12 +210,12 @@
 		<br>
 		This is a website for Core Interaction studio and lab, enjoy!
 		</div>
-	</h3>
+	</h3> -->
 
 </body>
 
 	<div class="video">
-	<video autoplay src="animation.mp4" height="250px" width="250px" class="videoPlayer" loop="loop" muted></video>
+	<video autoplay src="animation.mp4" class="videoPlayer"  width="500px" muted></video>
 	</div>
 
 
@@ -145,18 +227,30 @@
 	// 		})	
 	// 	})
 
-	console.log("ready")
+	
 
-	$("video").removeAttr("autoplay");
+	$("html").click(function() {
+		// console.log("ready")
+  	$(".flower").show();
+	});
 
-	$(".videoPlayer").mouseover(function(){
-		$("video")[0].play();
-	})
+	function toggleSidebar(){
+		document.getElementById("sidebar").classList.toggle('active');
+	}
 
-	$(".videoPlayer").mouseout(function(){
-		$("video")[0].pause();
-		$("video")[0].currentTime = 0;
-	})
+	
+	
+
+	// $("video").removeAttr("autoplay");
+
+	// $(".videoPlayer").mouseover(function(){
+	// 	$("video")[0].play();
+	// })
+
+	// $(".videoPlayer").mouseout(function(){
+	// 	$("video")[0].pause();
+	// 	$("video")[0].currentTime = 0;
+	// })
 
 
 

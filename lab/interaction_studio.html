@@ -2,55 +2,161 @@
 <html>
 <head>
 	<title>Core Studio Interaction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<style>
 		html{
-			font-family: arial;
+			font-family: sans-serif;
 			color: white;
 			box-sizing: border-box;
+			background-color: #dddddd;
 		}
 
-		.row{
-			display: flex;
-			height: 100vw;
-
+		body{
+			margin: 0;
 		}
 
-		#left-column{
-			float: left;
-    		width: 50%;
-    		overflow: fixed;
+		a{
+		color: white;
+		padding-right: 20px;
+		text-decoration: none;
 		}
 
-		#right-column{
-			float: right;
-    		width: 50%;
-    		overflow: scroll;
+		a:hover{
+		color: #789aa0;
+		}
+
+		#sidebar{
+		position: fixed;
+		width: 220px;
+		height: 100%;
+		background-color: #AB9999;
+		left: -220px;
+		transition: all 500ms linear;
+		}
+
+		#sidebar.active{
+		left: 0px;
+		}
+
+		#sidebar ul li{
+		color: #dddddd;
+		list-style: none;
+		padding: 15px 10px;
+		}
+
+		#sidebar .toggle-btn{
+		position: absolute;
+		left: 250px;
+		top: 20px;
+		}
+	
+		#sidebar .toggle-btn span{
+		display: block;
+		width: 30px;
+		height: 5px;
+		background: #AB9999;
+		margin: 5px 0 ;
+		border-radius: 5px;
 		}
 
 		h1{
 			position: fixed;
-			padding-left: 5vw;
+			text-align: center;
+			top: 10vh;
+			left: 46%;
 		}
 
-		h2{
+		.Projects{
+			width: 30vw;
+			margin: 10vw;
+		}
+
+		#Collection{
+			top: 20vh;
+			left: 45vw;
 			position: fixed;
-			font-size: 2.3vh;
-			padding-left: 5vw;
-			top: 10vh;
-	
+		}
+
+		#Collection{
+
+		}
+
+		#Testament{
+			top: 20vh;
+			left: 5vw;
+			position: fixed;
+		}
+
+		#Testament:hover {
+			background: url("TheBrandNewTestament.mp4");
+		}
+
+		.arrow{
+			height: 3vh;
+		}
+
+		#arrow1{
+			position: fixed;
+			left: 43vw;
+			top: 73vh;
+		}
+
+		#arrow2{
+			position: fixed;
+			left: 83vw;
+			top: 73vh;
 		}
 	</style>
+
+	<h1>Projects</h1>
 </head>
 
 <body>
 
-	<div class="row">
-		<div id="left-column" style="background-color: #AB9999"></div>
-			<h1>Projects</h1>
-			<h2> Dialogue(The Brand New Testament)</h2>
-		<div id="right-column" style="background-color: #dddddd"></div>
+	<div id="sidebar">
+		<div class="toggle-btn" onclick="toggleSidebar()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul>
+			<li>Home</li>
+			<li id="studio">
+				<a href="interaction_studio.html">
+				Interaction Studio
+				</a>
+			</li>
+			<li id="lab">
+				<a href="interaction_lab.html">
+				Interaction Lab
+				</a>
+			</li>
+		</ul>
+		
 	</div>
 
+<img src="The Brand New Testament_dialogue-05.jpg" class="Projects" id="Testament">
+<img src="Collection.jpg" class="Projects" id="Collection">
+
+<a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="_blank">
+	<img src="arrow.png" class="arrow" id="arrow1">
+</a>
+
+<a href="https://jasminewei0224.github.io/collection.html" target="_blank">
+<img src="arrow.png" class="arrow" id="arrow2">	
+</a>
+
 </body>
+
+<script>
+	$("#Testament").mouseover(function() {
+  	$("#Testament").attr('src == mp4', 'TheBrandNewTestament.mp4');
+	});
+
+	function toggleSidebar(){
+		document.getElementById("sidebar").classList.toggle('active');
+	}
+
+</script>
 </html>
