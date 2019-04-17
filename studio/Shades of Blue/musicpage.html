@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+
+		*{
+			background-color: #C8C8C8;
+		}
+
+		.dvdVideo{
+			width: 50vw;
+			position: fixed;
+			top: 15%;
+			left: 25%;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="dvd">
+		<img src="dvd.png" type="png" loop="loop" class="dvdVideo">
+		<audio src="seesaw.mp3" type="mp3" class="seesawAudio" ></audio>
+	</div>
+</body>
+	<script>
+		$(".dvd").click(function() {
+  		$(".dvdVideo").attr('src', 'dvd.gif');
+		});
+	</script>
+</html>

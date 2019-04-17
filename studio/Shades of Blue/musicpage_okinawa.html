@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+
+		*{
+			background-color: #C8C8C8;
+			font-family: helvetica;
+			
+		}
+
+		.dvdVideo{
+			width: 60vw;
+			position: fixed;
+			top: 15%;
+			left: 10%;
+		
+		}
+
+		.musicTitle{
+			font-size: 80px;
+			color: white;
+			position: fixed;
+			left: 25%;
+			top: 50%;
+		}
+
+		.musicArtist{
+			font-size: 50px;
+			color: white;
+			position: fixed;
+			left: 35%;
+			top: 57%;
+		}
+		
+	</style>
+</head>
+<body>
+
+	
+		<h1 class="musicTitle">Okinawa</h1>
+		<p class="musicArtist">92914</p>
+
+	<div class="dvd">
+		<img src="dvd.png" type="png" loop="loop" class="dvdVideo">
+		<audio src="Okinawa.mp3" type="mp3" class="dvdAudio" ></audio>
+	</div>
+
+	
+</body>
+	<script>
+		$(".dvd").click(function() {
+  		$(".dvdVideo").attr('src', 'dvd.gif');
+		});
+		$(".dvd").click(function(){
+		$(".dvdAudio")[0].play();
+	});
+
+	</script>
+</html>

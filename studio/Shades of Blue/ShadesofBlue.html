@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shades of Blue- My Jounrey to Greece</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+
+		.homepage{
+			z-index: 0;
+		}
+
+		.backgroundcolor{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			background-color: #C8C8C8;
+			z-index: 1;
+			animation: fadeIn 3s forwards;
+		}
+
+		@keyframes fadeIn{
+			0%{
+				opacity: 0.5;
+			}
+
+			100%{
+				opacity: 0;
+			}
+		}
+		
+		.logo{
+			position: fixed;
+			top: 45%;
+			left: 30vw;
+			width: 100vw;
+			z-index: 2;
+			animation: logo 0.25s forwards;
+			animation-delay: 5.5s;
+		}
+
+		@keyframes logo{
+			from{
+				opacity: 1;
+			}
+
+			to{
+				opacity: 0;
+			}
+		}
+
+		.subtitle{
+			font-family: helvetica;
+			font-size: 40px;
+			color: white;
+			position: fixed;
+			top: 50%;
+			left: 60vw;
+			width: 100vw;
+			z-index: 2;
+			animation: logo 0.25s forwards;
+			animation-delay: 5.5s;
+		}
+	</style>
+</head>
+<body>
+	<div class="backgroundcolor"></div>
+	<img src="homepage.jpg" class="homepage">
+	
+	<img src="shadesofblue.gif" class="logo">
+	<p class="subtitle">A journey to Greece</p>
+	
+</body>
+	<script>
+		
+	</script>
+</html>
