@@ -107,9 +107,9 @@
 	<img src="masking-tape.png" class="mt1">
 	<img src="masking-tape.png" class="mt2">
 
-	<div  class="onepng">
-		<img src="1.png" type="png">
-		<a href="">	
+	<div  class="onepng1">
+		<img src="1.png" type="png" class="onepng">
+		<a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/1video.html">	
 	</div>
 
 	<img src="2.png" type="png" class="twopng">
@@ -131,6 +131,8 @@
 	<img src="homepage.jpg" class="homepage">
 </body>
 	<script>
-		
+		$(".onepng1").click(function(){
+			window.location = $(this).find("a").attr("href");
+		});
 	</script>
 </html>
