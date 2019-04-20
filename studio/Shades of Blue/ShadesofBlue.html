@@ -95,6 +95,13 @@
 			left: 80vw;
 			top: 25vh;
 		}
+
+		.videoview{
+			position: fixed;
+			z-index: 100;
+			min-height: 100vh;
+			width: 100vw;
+		}
 	</style>
 </head>
 <body>
@@ -107,12 +114,13 @@
 	<img src="masking-tape.png" class="mt1">
 	<img src="masking-tape.png" class="mt2">
 
-	<div  class="onepng1">
-		<img src="1.png" type="png" class="onepng">
-		<a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/1video.html">	
+	<div  class="onepngclick">
+		<img src="1.png" type="png" class="onepng clickable">
+		<!-- <a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/1video.html"> -->	
 	</div>
 
-	<img src="2.png" type="png" class="twopng">
+	
+	<img src="2.png" type="png" class="twopng clickable">
 	<!-- <img src="3.png" type="png" class="threepng">
 	<img src="4.png" type="png" class="fourpng">
 	<img src="5.png" type="png" class="fivepng">
@@ -131,8 +139,26 @@
 	<img src="homepage.jpg" class="homepage">
 </body>
 	<script>
-		$(".onepng1").click(function(){
-			window.location = $(this).find("a").attr("href");
+		$(document).ready(function(){
+
+			$('.info').hide();
+
+		// $(".onepngclick").click(function(){
+		// 	window.location = $(this).find("a").attr("href");
+		// });
+
+		$('.clickable').click(function(){
+			// $(this).css("height", "100vh");
+			
+			console.log('ready')
+			this.removeAttribute('class');
+			$(this).addClass('.videoview')
+		})
+
+
+
+		
+			
 		});
 	</script>
 </html>

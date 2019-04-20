@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MAMMONISM</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			background-color: #ED2124;
+		}
+
+		.money{
+			position: fixed;
+			left: 35%;
+			top: 35%;
+			width: 30vw;
+			animation: money 2s forwards;
+			animation-delay: 2s;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+
+		@keyframes money{
+			from{
+				opacity: 1;
+			}
+
+			to{
+				opacity: 0;
+			}
+		}
+
+		.title{
+			position: fixed;
+			left: 35%;
+			top: 35%;
+			width: 30vw;
+			opacity: 0; 
+			animation: title 5s forwards;
+			animation-delay: 4s;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+
+		@keyframes title{
+			from{
+				opacity: 1;
+			}
+
+			to{
+				opacity: 0;
+			}
+		}
+
+		.sub-title{
+			position: fixed;
+			left: 87%;
+			top: 95%;
+			width: 10vw;
+			opacity: 0; 
+			animation: title 5s forwards;
+			animation-delay: 4s;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+
+		.lookbook{
+			
+			position: fixed;
+			opacity: 0; 
+			animation: lookbook 1s forwards;
+			animation-delay: 9s;
+			animation-timing-function: ease-in;
+			animation-direction: alternate;
+		}
+
+		@keyframes lookbook{
+			from{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+		}
+
+		#look1{
+			width: 20vw;
+			position: fixed;
+			top: 30%;
+			left: 2%
+
+		}
+
+		#look1:hover{
+			cursor: pointer;
+		}
+
+		#look2{
+			width: 20vw;
+			position: fixed;
+			top: 30%;
+			left: 26%;
+		}
+
+		#look2:hover{
+			cursor: pointer;
+		}
+
+		#look3{
+			width: 20vw;
+			position: fixed;
+			top: 30%;
+			left: 50%;
+		}
+
+		#look3:hover{
+			cursor: pointer;
+		}
+
+		#look4{
+			width: 20vw;
+			position: fixed;
+			top: 30%;
+			left: 75%;
+		}
+
+		#look4:hover{
+			cursor: pointer;
+		}
+
+	.popupCloseButton {
+    	cursor: pointer;
+    	display: inline-block;
+    	font-family: helvatica;
+    	font-weight: bold;
+    	position: absolute;
+    	top: 20px;
+    	right: 20px;
+    	font-size: 25px;
+    	line-height: 30px;
+    	width: 30px;
+    	height: 30px;
+    	text-align: center;
+    	color: #EACF1A;
+	}
+
+	.hover_bkgr_fricc{
+    	background: #ED2124;
+    	display:none;
+    	height:100%;
+    	position:fixed;
+    	text-align:center;
+    	top:0;
+    	width:100%;
+    	z-index:10000;
+	}
+	
+	.popupCloseButton2 {
+    	cursor: pointer;
+    	display: inline-block;
+    	font-family: helvatica;
+    	font-weight: bold;
+    	position: absolute;
+    	top: 20px;
+    	right: 20px;
+    	font-size: 25px;
+    	line-height: 30px;
+    	width: 30px;
+    	height: 30px;
+    	text-align: center;
+    	color: #EACF1A;
+	}
+
+	.hover_bkgr_fricc2{
+    	background: #ED2124;
+    	display:none;
+    	height:100%;
+    	position:fixed;
+    	text-align:center;
+    	top:0;
+    	width:100%;
+    	z-index:10000;
+	}
+
+	.popupCloseButton3 {
+    	cursor: pointer;
+    	display: inline-block;
+    	font-family: helvatica;
+    	font-weight: bold;
+    	position: absolute;
+    	top: 20px;
+    	right: 20px;
+    	font-size: 25px;
+    	line-height: 30px;
+    	width: 30px;
+    	height: 30px;
+    	text-align: center;
+    	color: #EACF1A;
+	}
+
+	.hover_bkgr_fricc3{
+    	background: #ED2124;
+    	display:none;
+    	height:100%;
+    	position:fixed;
+    	text-align:center;
+    	top:0;
+    	width:100%;
+    	z-index:10000;
+	}
+
+	.popupCloseButton4 {
+    	cursor: pointer;
+    	display: inline-block;
+    	font-family: helvatica;
+    	font-weight: bold;
+    	position: absolute;
+    	top: 20px;
+    	right: 20px;
+    	font-size: 25px;
+    	line-height: 30px;
+    	width: 30px;
+    	height: 30px;
+    	text-align: center;
+    	color: #EACF1A;
+	}
+
+	.hover_bkgr_fricc4{
+    	background: #ED2124;
+    	display:none;
+    	height:100%;
+    	position:fixed;
+    	text-align:center;
+    	top:0;
+    	width:100%;
+    	z-index:10000;
+	}
+
+	.chnumber{
+		width: 2.5vw;
+		position: fixed;
+		left: 2vw;
+		top: 5vh;
+	}
+*/
+
+
+	</style>
+</head>
+<body>
+	<img src="giphy.gif" class="money" type="gif">
+	<img src="title.png" type="png" class="title">
+	<img src="sub-title.png" type="png" class="sub-title">
+	<div class="lookbook">
+		<img src="look1.jpg" id="look1">
+		<img src="look2.jpg" id="look2">
+		<img src="look3.jpg" id="look3">
+		<img src="look4.jpg" id="look4">
+
+	<div class="hover_bkgr_fricc">
+    	<span class="helper"></span>
+    
+        	<div class="popupCloseButton">X</div>
+        	<p>
+        		<img src="ch1.png" class="chnumber">
+        	</p>
+	</div>
+
+	<div class="hover_bkgr_fricc2">
+    	<span class="helper"></span>
+    
+        	<div class="popupCloseButton2">X</div>
+        	<p> 
+        		<img src="ch2.png" class="chnumber">
+        	</p>
+	</div>
+
+	<div class="hover_bkgr_fricc3">
+    	<span class="helper"></span>
+    
+        	<div class="popupCloseButton3">X</div>
+        	<p> 
+        		<img src="ch3.png" class="chnumber">
+        	</p>
+	</div>
+
+	<div class="hover_bkgr_fricc4">
+    	<span class="helper"></span>
+    
+        	<div class="popupCloseButton4">X</div>
+        	<p> 
+        		<img src="ch4.png" class="chnumber">
+        	</p>
+	</div>
+</body>
+	<script>
+
+		$("#look1").click(function(){
+			console.log("ready")
+			$('.hover_bkgr_fricc').show();
+		});
+
+		$('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+   		});
+
+//////////////////
+
+		$("#look2").click(function(){
+			console.log("ready")
+			$('.hover_bkgr_fricc2').show();
+		});
+
+		$('.popupCloseButton2').click(function(){
+        $('.hover_bkgr_fricc2').hide();
+   		});
+
+//////////////////
+
+		$("#look3").click(function(){
+			console.log("ready")
+			$('.hover_bkgr_fricc3').show();
+		});
+
+		$('.popupCloseButton3').click(function(){
+        $('.hover_bkgr_fricc3').hide();
+   		});
+
+//////////////////
+
+		$("#look4").click(function(){
+			console.log("ready")
+			$('.hover_bkgr_fricc4').show();
+		});
+
+		$('.popupCloseButton4').click(function(){
+        $('.hover_bkgr_fricc4').hide();
+   		});
+	</script>
+</html>
