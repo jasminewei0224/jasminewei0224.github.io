@@ -116,7 +116,7 @@
 
 	<div  class="onepngclick">
 		<img src="1.png" type="png" class="onepng clickable">
-		<!-- <a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/1video.html"> -->	
+		<a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/1video.html">	
 	</div>
 
 	
@@ -141,19 +141,19 @@
 	<script>
 		$(document).ready(function(){
 
-			$('.info').hide();
+			// $('.info').hide();
 
-		// $(".onepngclick").click(function(){
-		// 	window.location = $(this).find("a").attr("href");
-		// });
+		$(".onepngclick").click(function(){
+			window.location = $(this).find("a").attr("href");
+		});
 
-		$('.clickable').click(function(){
-			// $(this).css("height", "100vh");
+		// $('.clickable').click(function(){
+		// 	// $(this).css("height", "100vh");
 			
-			console.log('ready')
-			this.removeAttribute('class');
-			$(this).addClass('.videoview')
-		})
+		// 	console.log('ready')
+		// 	this.removeAttribute('class');
+		// 	$(this).addClass('videoview')
+		// })
 
 
 
