@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+
+		body{
+			width: 100vw;
+			overflow-x: hidden;
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		video{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		.scrollarea{
+			position: relative;
+			width: 100vw;
+			overflow-x: hidden;
+			box-sizing: border-box;
+			min-height: 300vh;
+			background-color: rgba(255,255,255, 0);
+		}
+
+		.audio{
+			
+			position: absolute;
+			height: 100vh;
+			left: 0;
+			right: 0;
+			background: #C8C8C8;
+			width: 100vw;
+
+		}
+
+		.dvdVideo{
+			width: 60vw;
+			position: relative;
+			top: 15%;
+			left: 20%;
+		
+		}
+
+		.musicTitle{
+			font-size: 80px;
+			color: white;
+			font-family: helvetica;
+			position: relative;
+			text-align: center;
+			top: 50%;
+		}
+
+		.musicArtist{
+			font-size: 50px;
+			color: white;
+			font-family: helvetica;
+			position: relative;
+			text-align: center;
+			top: 57%;
+		}
+		
+
+		#ourtext{
+			margin-top: 200vh;
+			font-size: 500px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<video autoplay loop muted class="video">
+		<source src="2.mp4" type=""video/mp4>
+	</video>
+
+	<div class="scrollarea">
+		<div class="audio">
+			<h1 class="musicTitle">Okinawa</h1>
+			<p class="musicArtist">92914</p>
+
+			<div class="dvd">
+				<img src="dvd.png" type="png" loop="loop" class="dvdVideo">
+				<audio src="Okinawa.mp3" type="mp3" class="dvdAudio" ></audio>
+			</div>
+		</div>
+		<div id="ourtext">our text</div>
+	</div>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("body, html").animate({
+			scrollTop: $(window).innerHeight()
+		}, 600)
+
+		console.log($("body, html").scrollTop())
+		
+
+		$(document).scroll(function(){
+
+			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
+
+			var maximumOpacity = 0.5;
+
+			$("#ourtext").css({"opacity" : percentageScrolled})
+
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
+		})
+
+		$(".dvd").click(function() {
+  		$(".dvdVideo").attr('src', 'dvd.gif');
+		});
+		$(".dvd").click(function(){
+		$(".dvdAudio")[0].play();
+	});
+	})
+
+	
+</script>
+</body>
+</html>
