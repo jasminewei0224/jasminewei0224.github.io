@@ -13,14 +13,15 @@
 			width: 100%;
 			height: 100%;
 			position: fixed;
+			pointer-events: none;
 			background-color: #C8C8C8;
-			z-index: 1;
-			animation: fadeIn 3s forwards;
+			z-index: 1000;
+			animation: fadeIn 7s forwards;
 		}
 
 		@keyframes fadeIn{
 			0%{
-				opacity: 0.5;
+				opacity: 0.8;
 			}
 
 			100%{
@@ -33,7 +34,7 @@
 			top: 45%;
 			left: 30vw;
 			width: 100vw;
-			z-index: 2;
+			z-index: 100;
 			animation: logo 0.25s forwards;
 			animation-delay: 5.5s;
 		}
@@ -56,7 +57,7 @@
 			top: 50%;
 			left: 60vw;
 			width: 100vw;
-			z-index: 2;
+			z-index: 100;
 			animation: logo 0.25s forwards;
 			animation-delay: 5.5s;
 		}
@@ -78,16 +79,6 @@
 			opacity: 0.8;
 		}
 
-		.mt2{
-			position: absolute;
-			z-index: 3;
-			width: 40vw;
-			left: 120vw;
-			top: 20vh;
-			transform: rotate(20deg);
-			opacity: 0.8;
-		}
-
 		.twopng{
 			position: absolute;
 			z-index: 2;
@@ -96,11 +87,225 @@
 			top: 25vh;
 		}
 
-		.videoview{
-			position: fixed;
-			z-index: 100;
-			max-height: 100vh;
-			max-width: 100vw;
+		.mt2{
+			position: absolute;
+			z-index: 3;
+			width: 30vw;
+			left: 120vw;
+			top: 20vh;
+			transform: rotate(20deg);
+			opacity: 0.8;
+		}
+
+		.threepng{
+			position: absolute;
+			z-index: 2;
+			width: 55vw;
+			left: 210vw;
+			top: 36vh;
+		}
+
+		.mt3{
+			position: absolute;
+			z-index: 3;
+			width: 20vw;
+			left: 230vw;
+			top: 34vh;
+			opacity: 0.8;
+		}
+
+		.fourpng{
+			position: absolute;
+			z-index: 2;
+			width: 30vw;
+			left: 270vw;
+			top: 45vh;
+		}
+
+		.mt4{
+			position: absolute;
+			z-index: 3;
+			width: 20vw;
+			left: 285vw;
+			top: 42vh;
+			opacity: 0.8;
+			transform: rotate(20deg);
+		}
+
+		.fivepng{
+			position: absolute;
+			z-index: 2;
+			width: 35vw;
+			left: 120vw;
+			top: 60vh;
+		}
+
+		.mt5{
+			position: absolute;
+			z-index: 3;
+			width: 25vw;
+			left: 113vw;
+			top: 58vh;
+			transform: rotate(-20deg);
+			opacity: 0.8;
+		}
+
+		.sixpng{
+			position: absolute;
+			z-index: 2;
+			width: 30vw;
+			left: 165vw;
+			top: 40vh;
+		}
+
+		.mt6{
+			position: absolute;
+			z-index: 3;
+			width: 25vw;
+			left: 165vw;
+			top: 37vh;
+			opacity: 0.8;
+		}
+
+		.sevenpng{
+			position: absolute;
+			z-index: 2;
+			width: 50vw;
+			left: 50vw;
+			top: 85vh;
+		}
+
+		.mt7{
+			position: absolute;
+			z-index: 3;
+			width: 20vw;
+			left: 80vw;
+			top: 83vh;
+			opacity: 0.8;
+		}
+
+		.eightpng{
+			position: absolute;
+			z-index: 2;
+			width: 30vw;
+			left: 145vw;
+			top: 110vh;
+		}
+
+		.mt8{
+			position: absolute;
+			z-index: 3;
+			width: 20vw;
+			left: 145vw;
+			top: 108vh;
+			opacity: 0.8;
+		}
+
+		.ninepng{
+			position: absolute;
+			z-index: 2;
+			width: 50vw;
+			left: 230vw;
+			top: 100vh;
+		}
+
+		.mt9{
+			position: absolute;
+			z-index: 3;
+			width: 20vw;
+			left: 240vw;
+			top: 97vh;
+			opacity: 0.8;
+		}
+
+		.tenpng{
+			position: absolute;
+			z-index: 2;
+			width: 25vw;
+			left: 50vw;
+			top: 140vh;
+		}
+
+		.mt10{
+			position: absolute;
+			z-index: 3;
+			width: 18vw;
+			left: 43vw;
+			top: 138vh;
+			transform: rotate(-20deg);
+			opacity: 0.8;
+		}
+
+		.elevenpng{
+			position: absolute;
+			z-index: 2;
+			width: 45vw;
+			left: 90vw;
+			top: 170vh;
+		}
+
+		.mt11{
+			position: absolute;
+			z-index: 3;
+			width: 18vw;
+			left: 123vw;
+			top: 168vh;
+			transform: rotate(20deg);
+			opacity: 0.6;
+		}
+
+		.twelvepng{
+			position: absolute;
+			z-index: 2;
+			width: 55vw;
+			left: 160vw;
+			top: 155vh;
+		}
+
+		.mt12{
+			position: absolute;
+			z-index: 3;
+			width: 18vw;
+			left: 205vw;
+			top: 153vh;
+			transform: rotate(20deg);
+			opacity: 0.6;
+		}
+
+		.thirteenpng{
+			position: absolute;
+			z-index: 2;
+			width: 55vw;
+			left: 250vw;
+			top: 130vh;
+		}
+
+		.mt13{
+			position: absolute;
+			z-index: 3;
+			width: 18vw;
+			left: 290vw;
+			top: 128vh;
+			transform: rotate(20deg);
+			opacity: 0.6;
+		}
+
+		.fourteenpng{
+			position: absolute;
+			z-index: 2;
+			width: 45vw;
+			left: 93vw;
+			top: 187vh;
+		}
+
+		.mt14{
+			position: absolute;
+			z-index: 3;
+			width: 18vw;
+			left: 85vw;
+			top: 185vh;
+			transform: rotate(-20deg);
+			opacity: 0.6;
 		}
 	</style>
 </head>
@@ -113,15 +318,28 @@
 
 	<img src="masking-tape.png" class="mt1">
 	<img src="masking-tape.png" class="mt2">
+	<img src="masking-tape.png" class="mt3">
+	<img src="masking-tape.png" class="mt4">
+	<img src="masking-tape.png" class="mt5">
+	<img src="masking-tape.png" class="mt6">
+	<img src="masking-tape.png" class="mt7">
+	<img src="masking-tape.png" class="mt8">
+	<img src="masking-tape.png" class="mt9">
+	<img src="masking-tape.png" class="mt10">
+	<img src="masking-tape.png" class="mt11">
+	<img src="masking-tape.png" class="mt12">
+	<img src="masking-tape.png" class="mt13">
+	<img src="masking-tape.png" class="mt14">
+
 
 	<div  class="onepngclick">
 		<img src="1.png" type="png" class="onepng clickable">
 		<a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/1video.html">	
 	</div>
 
-	
-	<img src="2.png" type="png" class="twopng clickable">
-	<!-- <img src="3.png" type="png" class="threepng">
+	<img src="1.png" type="png" class="onepng">
+	<img src="2.png" type="png" class="twopng">
+	<img src="3.png" type="png" class="threepng">
 	<img src="4.png" type="png" class="fourpng">
 	<img src="5.png" type="png" class="fivepng">
 	<img src="6.png" type="png" class="sixpng">
@@ -131,9 +349,9 @@
 	<img src="10.png" type="png" class="tenpng">
 	<img src="11.png" type="png" class="elevenpng">
 	<img src="12.png" type="png" class="twelvepng">
-	<img src="13.png" type="png" class="therteenpng">
+	<img src="13.png" type="png" class="thirteenpng">
 	<img src="14.png" type="png" class="fourteenpng">
-	<img src="15.png" type="png" class="fifteenpng">
+	<!-- <img src="15.png" type="png" class="fifteenpng">
 	<img src="16.png" type="png" class="sixteenpng"> -->
 	
 	<img src="homepage.jpg" class="homepage">
@@ -141,19 +359,10 @@
 	<script>
 		$(document).ready(function(){
 
-			// $('.info').hide();
-
 		$(".onepngclick").click(function(){
+			console.log("ready")
 			window.location = $(this).find("a").attr("href");
 		});
-
-		// $('.clickable').click(function(){
-		// 	// $(this).css("height", "100vh");
-			
-		// 	console.log('ready')
-		// 	this.removeAttribute('class');
-		// 	$(this).addClass('videoview')
-		// })
 
 
 
