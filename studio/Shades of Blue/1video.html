@@ -55,10 +55,10 @@
 		}
 
 		.dvdVideo{
-			width: 60vw;
+			width: 50vw;
 			position: relative;
 			top: 15%;
-			left: 20%;
+			left: 25%;
 		
 		}
 
@@ -77,7 +77,7 @@
 			font-family: helvetica;
 			position: relative;
 			text-align: center;
-			top: 57%;
+			top: 54%;
 		}
 		
 
@@ -85,6 +85,36 @@
 			margin-top: 200vh;
 			font-size: 500px;
 		}
+
+		#needle{
+			width: 50vw;
+			position: relative;
+			top: 10vh;
+			transform: rotate(-60deg);
+			animation-name: needleDrop; 
+			animation-duration: 2s;
+			animation: hidden;
+		}
+
+		.transform{
+			transition: all 2s ease;
+		}
+
+		.transform-active{
+			transform-origin: top right;
+			transform: rotate(60deg);
+		}
+
+		/*@keyframes needleDrop{
+			transform-origin: top-right;
+			from {
+				transform: rotate(0deg)
+			}
+			to{
+				transform: rotate(60deg)
+			}
+		}*/
+	
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -100,10 +130,17 @@
 			<h1 class="musicTitle">Okinawa</h1>
 			<p class="musicArtist">92914</p>
 
+			<div class="transform">
+				
+			</div>
+			<img src="needle.png" type="png" id="needle">
+			
+
 			<div class="dvd">
 				<img src="dvd.png" type="png" loop="loop" class="dvdVideo">
-				<audio src="Okinawa.mp3" type="mp3" class="dvdAudio" ></audio>
 			</div>
+				<audio src="Okinawa.mp3" type="mp3" class="dvdAudio" ></audio>
+			
 		</div>
 		<div id="ourtext">our text</div>
 	</div>
@@ -134,8 +171,14 @@
 		});
 		$(".dvd").click(function(){
 		$(".dvdAudio")[0].play();
+
+		$('.needle').click(function(){
+			console.log("ready")
+			$(".transform").toggleClass("transform-active");
+		});
 	});
 	})
+
 
 	
 </script>
