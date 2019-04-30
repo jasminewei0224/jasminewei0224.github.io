@@ -145,7 +145,7 @@
 			
 
 			<div class="dvd">
-				<img src="dvd.png" type="png" loop="loop" class="dvdVideo">
+				<img src="dvd.png" loop="infinite" class="dvdVideo">
 			</div>
 				<audio src="Bright Blue Skies.mp3" type="mp3" class="dvdAudio" ></audio>
 			
@@ -200,14 +200,28 @@
   		$(".dvdVideo").attr('src', 'dvd.gif');
 		});
 		$(".dvd").click(function(){
-		$(".dvdAudio")[0].play();
+			$(".dvdAudio")[0].play();
 
-		$('.needle').click(function(){
-			console.log("ready")
-			$(".transform").toggleClass("transform-active");
+			console.log("ready");
+			$("#needle").css("transform", "rotate(-300deg)")
+			//$(".transform").toggleClass("transform-active");
 		});
+
+		$("#needle").click(function(){
+			$(".dvdAudio")[0].pause();
+			$("#needle").css("transform", "rotate(300deg)")
+			$(".dvdVideo").attr('src', 'dvd.png');
+		});
+
+		// $(document).swiperight(funtion(){
+		// 	var randomNumber = 	Math.floor(Math.random * 18) +1;
+		// 	window.location.replace = randomNumber + "video.html";
+		// });
+
+
+
+
 	});
-	})
 
 
 	
