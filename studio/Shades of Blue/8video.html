@@ -70,7 +70,35 @@
 
 		#ourtext{
 			margin-top: 200vh;
-			font-size: 500px;
+			font-size: 35px;
+			font-family: helvetica;
+			position: absolute;
+			right: 1vw;
+			/*text-align: center;*/
+			color: white /*black*/;
+			white-space: pre;
+		}
+
+		#poemTitle{
+			position: absolute;
+			/*text-align: center;*/
+			top: 12vh;
+			right: 35vw;
+			width: 25vw;
+		}
+
+		.line1{
+			word-spacing: 5px;
+		}
+
+		#textwrap{
+			position: absolute;
+			width: 100px;
+			height: 300px;
+			background-color: white;
+			left: 50vw;
+			box-sizing: border-box;
+			
 		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -90,7 +118,20 @@
 				<audio src="Okinawa.mp3" type="mp3" class="dvdAudio" ></audio>
 			</div>
 		</div>
-		<div id="ourtext">our text</div>
+		<div id="ourtext">
+			<img src="hevows.png" type="png" id="poemTitle">
+			</br>
+			</br>
+			<!-- <div id="textwrap"></div> -->
+			Ever so often he vows       to start a better life.
+			But when night comes        with its own counsels,
+			with its compromises,        and with its promises;
+			but when night comes        with its own dirve
+			of the body that desires and craves, he turns again,
+			abashed,to the same fateful pleasure.
+			</br>
+			</br>
+		</div>
 	</div>
 
 <script type="text/javascript">
