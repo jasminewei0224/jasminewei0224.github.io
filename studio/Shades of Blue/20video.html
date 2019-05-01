@@ -104,7 +104,7 @@
 			animation: hidden;
 		}
 
-		.transform{
+		/*.transform{
 			transition: all 2s ease;
 		}
 
@@ -113,7 +113,7 @@
 			transform: rotate(60deg);
 		}
 
-		/*@keyframes needleDrop{
+		@keyframes needleDrop{
 			transform-origin: top-right;
 			from {
 				transform: rotate(0deg)
@@ -122,7 +122,8 @@
 				transform: rotate(60deg)
 			}
 		}*/
-	
+
+
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -143,7 +144,7 @@
 			</div>
 			<img src="needle.png" type="png" id="needle">
 			
-
+			<img src="needle.png" type="png" id="needle">
 			<div class="dvd">
 				<img src="dvd.png" loop="infinite" class="dvdVideo">
 			</div>
@@ -196,21 +197,27 @@
 			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
 		})
 
+	
 		$(".dvd").click(function() {
   		$(".dvdVideo").attr('src', 'dvd.gif');
 		});
 		$(".dvd").click(function(){
 			$(".dvdAudio")[0].play();
-
+			$(".dvdVideo").css('width','75vw')
+			$(".dvdVideo").css('left','15vw')
+			$(".dvdVideo").css('top','13vw')
 			console.log("ready");
-			$("#needle").css("transform", "rotate(-300deg)")
+			$("#needle").css("transform", "rotate(320deg)")
 			//$(".transform").toggleClass("transform-active");
 		});
 
 		$("#needle").click(function(){
 			$(".dvdAudio")[0].pause();
-			$("#needle").css("transform", "rotate(300deg)")
+			$("#needle").css("transform", "rotate(290deg)")
 			$(".dvdVideo").attr('src', 'dvd.png');
+			$(".dvdVideo").css('width','60vw')
+			$(".dvdVideo").css('left','24vw')
+			$(".dvdVideo").css('top','22vw')
 		});
 
 		// $(document).swiperight(funtion(){

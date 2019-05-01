@@ -104,14 +104,14 @@
 			animation: hidden;
 		}
 
-		.transform{
+		/*.transform{
 			transition: all 2s ease;
 		}
 
 		.transform-active{
 			transform-origin: top right;
 			transform: rotate(60deg);
-		}
+		}*/
 
 		/*@keyframes needleDrop{
 			transform-origin: top-right;
@@ -201,16 +201,21 @@
 		});
 		$(".dvd").click(function(){
 			$(".dvdAudio")[0].play();
-
+			$(".dvdVideo").css('width','75vw')
+			$(".dvdVideo").css('left','15vw')
+			$(".dvdVideo").css('top','13vw')
 			console.log("ready");
-			$("#needle").css("transform", "rotate(-300deg)")
+			$("#needle").css("transform", "rotate(320deg)")
 			//$(".transform").toggleClass("transform-active");
 		});
 
 		$("#needle").click(function(){
 			$(".dvdAudio")[0].pause();
-			$("#needle").css("transform", "rotate(300deg)")
+			$("#needle").css("transform", "rotate(290deg)")
 			$(".dvdVideo").attr('src', 'dvd.png');
+			$(".dvdVideo").css('width','60vw')
+			$(".dvdVideo").css('left','24vw')
+			$(".dvdVideo").css('top','22vw')
 		});
 
 		// $(document).swiperight(funtion(){

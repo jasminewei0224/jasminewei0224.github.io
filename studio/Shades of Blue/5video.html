@@ -43,9 +43,9 @@
 
 		.dvdVideo{
 			width: 60vw;
-			position: relative;
+			position: absolute;
 			top: 15%;
-			left: 20%;
+			left: 22%;
 		
 		}
 
@@ -80,6 +80,16 @@
 			text-align: center;
 			width: 25vw;
 		}
+
+		#needle{
+			width: 50vw;
+			position: absolute;
+			top: 18vh;
+			transform: rotate(-60deg);
+			animation-name: needleDrop; 
+			animation-duration: 2s;
+			animation: hidden;
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -92,7 +102,7 @@
 		<div class="audio">
 			<h1 class="musicTitle">Above the Clouds</h1>
 			<p class="musicArtist">SŸDE, Olivia Reid</p>
-
+			<img src="needle.png" type="png" id="needle">
 			<div class="dvd">
 				<img src="dvd.png" type="png" loop="loop" class="dvdVideo">
 				<audio src="Above The Clouds ft Olivia Reid.mp3" type="mp3" class="dvdAudio" ></audio>
@@ -144,8 +154,23 @@
   		$(".dvdVideo").attr('src', 'dvd.gif');
 		});
 		$(".dvd").click(function(){
-		$(".dvdAudio")[0].play();
-	});
+			$(".dvdAudio")[0].play();
+			$(".dvdVideo").css('width','75vw')
+			$(".dvdVideo").css('left','15vw')
+			$(".dvdVideo").css('top','13vw')
+			console.log("ready");
+			$("#needle").css("transform", "rotate(320deg)")
+			//$(".transform").toggleClass("transform-active");
+		});
+
+		$("#needle").click(function(){
+			$(".dvdAudio")[0].pause();
+			$("#needle").css("transform", "rotate(290deg)")
+			$(".dvdVideo").attr('src', 'dvd.png');
+			$(".dvdVideo").css('width','60vw')
+			$(".dvdVideo").css('left','24vw')
+			$(".dvdVideo").css('top','22vw')
+		});
 	})
 
 	
