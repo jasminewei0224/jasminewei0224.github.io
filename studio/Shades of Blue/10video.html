@@ -104,6 +104,7 @@
 			</div>
 		</div>
 		<div id="ourtext">
+			Remember,body...
 			</br>
 			</br>
 			Now that all these are long in the past,
@@ -133,11 +134,32 @@
 
 			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
 
-			var maximumOpacity = 0.5;
+			// console.log(percentageScrolled)
 
-			$("#ourtext").css({"opacity" : percentageScrolled})
+			if (percentageScrolled<0.5) {
+				$("#ourtext").css({"opacity" : 0})
 
-			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + 0 + ")"})
+			}else{
+				var maximumOpacity = 0.5;
+
+			$("#ourtext").css({"opacity" : (percentageScrolled-0.5)*2})
+
+			console.log(((percentageScrolled*maximumOpacity))*2)
+
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + ((percentageScrolled) - 0.5)*1.2 + ")"})
+			}
+
+			
+
+			
+
+				// we have percentage scrolled 
+				// we don't want an opacity when we're in the middle of the page
+				// we do want an opacity as soon as we start scrolling
+
+				// so this means that we have our percentage scrolled 
+
 		})
 
 		$(".dvd").click(function() {

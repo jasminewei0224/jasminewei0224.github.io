@@ -218,10 +218,12 @@
 			$(".dvdVideo").css('top','22vw')
 		});
 
-		// $(document).swiperight(funtion(){
-		// 	var randomNumber = 	Math.floor(Math.random * 18) +1;
-		// 	window.location.replace = randomNumber + "video.html";
-		// });
+		$("html").on( "swiperight", function(){
+			var randomNumber = 	Math.floor(Math.random() * 18) + 1;
+			var newURL = randomNumber + "video.html";
+			console.log(newURL)
+			window.location.replace = newURL;
+		});
 
 
 
