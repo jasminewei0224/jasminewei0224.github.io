@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+
+		body{
+			width: 100vw;
+			overflow-x: hidden;
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		video{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 0;
+		}
+
+		.circle{
+			background-color: white;
+			width: 50vw;
+			border-radius: 50%;
+			opacity: ;
+			position: absolute;
+			display: block;
+			top: 90%
+			left: 40%;
+			z-index: 200;
+		}
+
+		.scrollarea{
+			position: relative;
+			width: 100vw;
+			overflow-x: hidden;
+			box-sizing: border-box;
+			min-height: 300vh;
+			background-color: rgba(255,255,255, 0);
+		}
+
+		.audio{
+			
+			position: absolute;
+			height: 100vh;
+			left: 0;
+			right: 0;
+			background: #C8C8C8;
+			width: 100vw;
+
+		}
+
+		.dvdVideo{
+			width: 60vw;
+			position: absolute;
+			top: 15%;
+			left: 22%;
+		
+		}
+
+		.musicTitle{
+			font-size: 80px;
+			color: white;
+			font-family: helvetica;
+			position: relative;
+			text-align: center;
+			top: 55%;
+		}
+
+		.musicArtist{
+			font-size: 60px;
+			color: white;
+			font-family: helvetica;
+			position: relative;
+			text-align: center;
+			top: 59%;
+		}
+		
+
+		#ourtext{
+			margin-top: 200vh;
+			font-size: 18px;
+			font-family: helvetica;
+			text-align: center;
+			color: white;
+		}
+
+		#poemTitle{
+			text-align: center;
+			width: 20vw;
+		}
+
+		#needle{
+			width: 50vw;
+			position: absolute;
+			top: 18vh;
+			transform: rotate(-60deg);
+			animation-name: needleDrop; 
+			animation-duration: 2s;
+			animation: hidden;
+		}
+
+		.transform{
+			transition: all 2s ease;
+		}
+
+		.transform-active{
+			transform-origin: top right;
+			transform: rotate(60deg);
+		}
+
+		/*@keyframes needleDrop{
+			transform-origin: top-right;
+			from {
+				transform: rotate(0deg)
+			}
+			to{
+				transform: rotate(60deg)
+			}
+		}*/
+	
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<video autoplay loop muted class="video">
+		<source src="26.mp4" type=""video/mp4>
+	</video>
+
+	<div class="circle"></div>
+
+	<div class="scrollarea">
+		<div class="audio">
+			<h1 class="musicTitle">Drama</h1>
+			<p class="musicArtist">Pink Sweat$</p>
+
+			<div class="transform">
+				
+			</div>
+			<img src="needle.png" type="png" id="needle">
+			
+
+			<div class="dvd">
+				<img src="dvd.png" loop="infinite" class="dvdVideo">
+			</div>
+				<audio src="Drama 2.mp3" type="mp3" class="dvdAudio" ></audio>
+			
+	</div>
+		
+		
+		<div id="ourtext">
+			<!-- ITHACA -->
+			<img src="ITHACA.png" type="png" id="poemTitle">
+		</br>
+		</br>
+		As you set out bound for Ithaca,
+		</br>
+		hope that the journey is a long one, 
+		</br>
+		full of adventures, full of learning.
+		</br>
+		Of the Laestrygonians and Cyclopes,
+		</br>
+		of wrathful Poseidon have no fear,
+		</br>
+		you'll never meet suchlike on your journey,
+		</br>
+		if your thoughts remain lofty, if noble
+		</br>
+		sentiment grips your body and spirit.
+		</div>
+	</div>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("body, html").animate({
+			scrollTop: $(window).innerHeight()
+		}, 600)
+
+		console.log($("body, html").scrollTop())
+		
+
+		$(document).scroll(function(){
+
+			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
+
+			var maximumOpacity = 0.5;
+
+			$("#ourtext").css({"opacity" : percentageScrolled})
+
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
+		})
+
+		$(".dvd").click(function() {
+  		$(".dvdVideo").attr('src', 'dvd.gif');
+		});
+		$(".dvd").click(function(){
+			$(".dvdAudio")[0].play();
+
+			console.log("ready");
+			$("#needle").css("transform", "rotate(-300deg)")
+			//$(".transform").toggleClass("transform-active");
+		});
+
+		$("#needle").click(function(){
+			$(".dvdAudio")[0].pause();
+			$("#needle").css("transform", "rotate(300deg)")
+			$(".dvdVideo").attr('src', 'dvd.png');
+		});
+
+		// $(document).swiperight(funtion(){
+		// 	var randomNumber = 	Math.floor(Math.random * 18) +1;
+		// 	window.location.replace = randomNumber + "video.html";
+		// });
+
+
+
+
+	});
+
+
+	
+</script>
+</body>
+</html>
