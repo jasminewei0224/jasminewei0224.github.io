@@ -70,7 +70,7 @@
 
 		#ourtext{
 			margin-top: 200vh;
-			font-size: 18px;
+			font-size: 23px;
 			font-family: helvetica;
 			text-align: center;
 			color: white /*black*/;
@@ -84,6 +84,11 @@
 			animation-name: needleDrop; 
 			animation-duration: 2s;
 			animation: hidden;
+		}
+
+		#poemTitle{
+			text-align: center;
+			width: 25vw;
 		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -104,7 +109,7 @@
 			</div>
 		</div>
 		<div id="ourtext">
-			Voices
+			<img src="voices.png" type="png" id="poemTitle">
 			</br>
 			</br>
 			Sometimes in dreams they speak to us;
@@ -136,11 +141,19 @@
 
 			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
 
-			var maximumOpacity = 0.5;
+			if (percentageScrolled<0.5) {
+				$("#ourtext").css({"opacity" : 0})
 
-			$("#ourtext").css({"opacity" : percentageScrolled})
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + 0 + ")"})
+			}else{
+				var maximumOpacity = 0.5;
 
-			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
+			$("#ourtext").css({"opacity" : (percentageScrolled-0.5)*4})
+
+			console.log(((percentageScrolled*maximumOpacity))*2)
+
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + ((percentageScrolled) - 0.5)*1.2 + ")"})
+			}
 		})
 
 		$(".dvd").click(function() {

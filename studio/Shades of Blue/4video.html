@@ -149,11 +149,19 @@
 
 			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
 
-			var maximumOpacity = 0.5;
+			if (percentageScrolled<0.5) {
+				$("#ourtext").css({"opacity" : 0})
 
-			$("#ourtext").css({"opacity" : percentageScrolled})
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + 0 + ")"})
+			}else{
+				var maximumOpacity = 0.5;
 
-			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
+			$("#ourtext").css({"opacity" : (percentageScrolled-0.5)*4})
+
+			console.log(((percentageScrolled*maximumOpacity))*2)
+
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + ((percentageScrolled) - 0.5)*1.2 + ")"})
+			}
 		})
 
 		$(".dvd").click(function() {

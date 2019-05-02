@@ -76,6 +76,11 @@
 			color: white /*black*/;
 		}
 
+		#poemTitle{
+			text-align: center;
+			width: 55vw;
+		}
+
 		#needle{
 			width: 50vw;
 			position: absolute;
@@ -104,7 +109,7 @@
 			</div>
 		</div>
 		<div id="ourtext">
-			Remember,body...
+			<img src="rememberbody.png" type="png" id="poemTitle">
 			</br>
 			</br>
 			Now that all these are long in the past,
@@ -143,7 +148,7 @@
 			}else{
 				var maximumOpacity = 0.5;
 
-			$("#ourtext").css({"opacity" : (percentageScrolled-0.5)*2})
+			$("#ourtext").css({"opacity" : (percentageScrolled-0.5)*4})
 
 			console.log(((percentageScrolled*maximumOpacity))*2)
 

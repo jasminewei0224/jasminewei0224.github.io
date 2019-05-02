@@ -64,7 +64,7 @@
 			font-family: helvetica;
 			position: relative;
 			text-align: center;
-			top: 59s%;
+			top: 59%;
 		}
 		
 
@@ -74,6 +74,11 @@
 			font-family: helvetica;
 			text-align: center;
 			color: white /*black*/;
+		}
+
+		#poemTitle{
+			text-align: center;
+			width: 35vw;
 		}
 
 		#needle{
@@ -104,7 +109,7 @@
 			</div>
 		</div>
 		<div id="ourtext">
-			TO remain
+			<img src="remain.png" type="png" id="poemTitle">
 			</br>
 			</br>
 			It must have been one in the morning,
@@ -138,11 +143,19 @@
 
 			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
 
-			var maximumOpacity = 0.5;
+			if (percentageScrolled<0.5) {
+				$("#ourtext").css({"opacity" : 0})
 
-			$("#ourtext").css({"opacity" : percentageScrolled})
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + 0 + ")"})
+			}else{
+				var maximumOpacity = 0.5;
 
-			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + percentageScrolled*maximumOpacity + ")"})
+			$("#ourtext").css({"opacity" : (percentageScrolled-0.5)*4})
+
+			console.log(((percentageScrolled*maximumOpacity))*2)
+
+			$(".scrollarea").css({"background-color" : "rgba(255,255,255, " + ((percentageScrolled) - 0.5)*1.2 + ")"})
+			}
 		})
 
 		$(".dvd").click(function() {
@@ -154,7 +167,7 @@
 			$(".dvdVideo").css('left','15vw')
 			$(".dvdVideo").css('top','13vw')
 			console.log("ready");
-			$("#needle").css("transform", "rotate(320deg)")
+			$("#needle").css("transform", "rotate(330deg)")
 			//$(".transform").toggleClass("transform-active");
 		});
 
