@@ -104,14 +104,25 @@
 			animation: hidden;
 		}
 
+		#arrow{
+			width: 3vw;
+			position: absolute;
+			right: 3vw;
+			z-index: 1000;
+			opacity: 0.6;
+		}
+
 		
 	
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+	
 	<video loop autoplay muted class="video">
+
 		<source src="1.mp4" type=""video/mp4>
+			
 	</video>
 
 	<div class="circle"></div>
@@ -155,8 +166,12 @@
 		if your thoughts remain lofty, if noble
 		</br>
 		sentiment grips your body and spirit.
+
+		<img src="arrow.png" type="png" id="arrow">
 		</div>
+
 	</div>
+
 
 <script type="text/javascript">
 
@@ -209,13 +224,20 @@
 			$(".dvdVideo").css('top','22vw')
 		});
 
-		$("html").on( "swiperight", function(){
+		// $("html").on( "swiperight", function(){
+		// 	var randomNumber = 	Math.floor(Math.random() * 18) + 1;
+		// 	var newURL = randomNumber + "video.html";
+		// 	console.log(newURL)
+		// 	window.location.replace = newURL;
+		// });
+
+		$("#arrow").click(function(){
 			var randomNumber = 	Math.floor(Math.random() * 18) + 1;
 			var newURL = randomNumber + "video.html";
 			console.log(newURL)
 			window.location.replace = newURL;
+			// $(window).location.replace(newURL)
 		});
-
 		// $('.video').click(function(){
 		// 	$('.video').[0].play();
 		// });
