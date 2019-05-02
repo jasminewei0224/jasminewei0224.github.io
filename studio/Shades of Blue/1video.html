@@ -167,7 +167,7 @@
 		</br>
 		sentiment grips your body and spirit.
 
-		<img src="arrow.png" type="png" id="arrow">
+		<!-- <img src="arrow.png" type="png" id="arrow"> -->
 		</div>
 
 	</div>
@@ -224,20 +224,19 @@
 			$(".dvdVideo").css('top','22vw')
 		});
 
-		// $("html").on( "swiperight", function(){
-		// 	var randomNumber = 	Math.floor(Math.random() * 18) + 1;
-		// 	var newURL = randomNumber + "video.html";
-		// 	console.log(newURL)
-		// 	window.location.replace = newURL;
-		// });
-
-		$("#arrow").click(function(){
+		$("html").on( "swiperight", function(){
 			var randomNumber = 	Math.floor(Math.random() * 18) + 1;
 			var newURL = randomNumber + "video.html";
 			console.log(newURL)
 			window.location.replace = newURL;
-			// $(window).location.replace(newURL)
 		});
+
+		// $("#arrow").click(function(){
+		// 	var randomNumber = 	Math.floor(Math.random() * 18) + 1;
+		// 	var newURL = randomNumber + "video.html";
+		// 	console.log(newURL)
+		// 	window.location.replace(newURL)
+		// });
 		// $('.video').click(function(){
 		// 	$('.video').[0].play();
 		// });
