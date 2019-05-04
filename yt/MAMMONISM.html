@@ -14,11 +14,11 @@
 
 		.money{
 			position: fixed;
-			left: 35%;
-			top: 35%;
-			width: 30vw;
+			left: 32.5%;
+			top: 23%;
+			width: 35vw;
 			animation: money 2s forwards;
-			animation-delay: 2s;
+			animation-delay: 13s;
 			animation-timing-function: ease-in-out;
 			animation-direction: alternate;
 		}
@@ -40,7 +40,7 @@
 			width: 30vw;
 			opacity: 0; 
 			animation: title 5s forwards;
-			animation-delay: 4s;
+			animation-delay: 16s;
 			animation-timing-function: ease-in-out;
 			animation-direction: alternate;
 		}
@@ -62,7 +62,7 @@
 			width: 10vw;
 			opacity: 0; 
 			animation: title 5s forwards;
-			animation-delay: 4s;
+			animation-delay: 16s;
 			animation-timing-function: ease-in-out;
 			animation-direction: alternate;
 		}
@@ -72,9 +72,15 @@
 			position: fixed;
 			opacity: 0; 
 			animation: lookbook 1s forwards;
-			animation-delay: 9s;
+			animation-delay: 22s;
 			animation-timing-function: ease-in;
 			animation-direction: alternate;
+			width: 100%;
+			height: 50%;
+			top: 30%;
+			text-align: justify;
+			-ms-text-justify: distribute-all-lines;
+ 			text-justify: distribute-all-lines;
 		}
 
 		@keyframes lookbook{
@@ -90,8 +96,8 @@
 		#look1{
 			width: 20vw;
 			position: fixed;
-			top: 30%;
-			left: 2%
+			top: 25%;
+			left: 4vw;
 
 		}
 
@@ -102,8 +108,8 @@
 		#look2{
 			width: 20vw;
 			position: fixed;
-			top: 30%;
-			left: 26%;
+			top: 25%;
+			left: 28vw;
 		}
 
 		#look2:hover{
@@ -113,8 +119,8 @@
 		#look3{
 			width: 20vw;
 			position: fixed;
-			top: 30%;
-			left: 50%;
+			top: 25%;
+			left: 52vw;
 		}
 
 		#look3:hover{
@@ -124,14 +130,24 @@
 		#look4{
 			width: 20vw;
 			position: fixed;
-			top: 30%;
-			left: 75%;
+			top: 25%;
+			left: 76vw;
 		}
 
 		#look4:hover{
 			cursor: pointer;
 		}
 
+		/*#look1 #look2 #look3 #look4{
+			vertical-align: top;
+			width: 20vw;
+			display: inline-block;
+		}
+
+		#look1 #look2 #look3 #look4: hover{
+			cursor: pointer;
+		}
+*/
 	.popupCloseButton {
     	cursor: pointer;
     	display: inline-block;
@@ -180,7 +196,6 @@
     	display:none;
     	height:100%;
     	position:fixed;
-    	text-align:center;
     	top:0;
     	width:100%;
     	z-index:10000;
@@ -207,7 +222,6 @@
     	display:none;
     	height:100%;
     	position:fixed;
-    	text-align:center;
     	top:0;
     	width:100%;
     	z-index:10000;
@@ -234,38 +248,99 @@
     	display:none;
     	height:100%;
     	position:fixed;
-    	text-align:center;
     	top:0;
     	width:100%;
     	z-index:10000;
 	}
 
 	.chnumber{
-		width: 2.5vw;
+		width: 5vw;
 		position: fixed;
-		left: 2vw;
+		left: 5vw;
 		top: 5vh;
 	}
+
+	#oneOutfit1{
+		position: fixed;
+		width: 30vw;
+		left: 13.3vw;
+		top: 15vh;
+	}
+
+	#oneOutfit2{
+		position: fixed;
+		width: 30vw;
+		left: 56.6vw;
+		top: 15vh;
+	}
+
+	#twoOutfit1  {
+		position: fixed;
+		width: 30vw;
+		left: 13.3vw;
+		top: 35vh;
+	}
+
+
+
+	#twoOutfit2{
+		position: fixed;
+		width: 30vw;
+		left: 56.6vw;
+		top: 15vh;
+	}
+
+	#threeOutfit1{
+		position: fixed;
+		width: 30vw;
+		left: 13.3vw;
+		top: 35vh;
+	}
+
+	#threeOutfit2{
+		position: fixed;
+		width: 30vw;
+		left: 56.6vw;
+		top: 15vh;
+	}
+
+	#fourOutfit1{
+		position: fixed;
+		width: 30vw;
+		left: 13.3vw;
+		top: 35vh;
+	}
+
+	#fourOutfit2{
+		position: fixed;
+		width: 30vw;
+		left: 56.6vw;
+		top: 15vh;
+	}
+
 */
 
 
 	</style>
 </head>
 <body>
-	<img src="giphy.gif" class="money" type="gif">
+	<video src="money.mp4" class="money" type="mp4" muted autoplay="autoplay"></video>
 	<img src="title.png" type="png" class="title">
 	<img src="sub-title.png" type="png" class="sub-title">
 	<div class="lookbook">
-		<img src="look1.jpg" id="look1">
-		<img src="look2.jpg" id="look2">
-		<img src="look3.jpg" id="look3">
-		<img src="look4.jpg" id="look4">
+		<img src="1cover.jpg" id="look1">
+		<img src="2cover.jpg" id="look2">
+		<img src="3cover.jpg" id="look3">
+		<img src="4cover.jpg" id="look4">
+	</div>
 
 	<div class="hover_bkgr_fricc">
     	<span class="helper"></span>
     
         	<div class="popupCloseButton">X</div>
         	<p>
+        		<img src="1outfit-1.jpg" id="oneOutfit1" class="myImg">
+        		<img src="1outfit-2.jpg" id="oneOutfit2" class="myImg">
         		<img src="ch1.png" class="chnumber">
         	</p>
 	</div>
@@ -275,6 +350,8 @@
     
         	<div class="popupCloseButton2">X</div>
         	<p> 
+        		<img src="2outfit-1.jpg" id="twoOutfit1" class="myImg">
+        		<img src="2outfit-2.jpg" id="twoOutfit2"class="myImg">
         		<img src="ch2.png" class="chnumber">
         	</p>
 	</div>
@@ -284,6 +361,8 @@
     
         	<div class="popupCloseButton3">X</div>
         	<p> 
+        		<img src="3outfit-1.jpg" id="threeOutfit1" class="myImg">
+        		<img src="3outfit-2.jpg" id="threeOutfit2" class="myImg">
         		<img src="ch3.png" class="chnumber">
         	</p>
 	</div>
@@ -293,9 +372,13 @@
     
         	<div class="popupCloseButton4">X</div>
         	<p> 
+        		<img src="4outfit-1.jpg" id="fourOutfit1" class="myImg">
+        		<img src="4outfit-2.jpg" id="fourOutfit2" class="myImg">
         		<img src="ch4.png" class="chnumber">
         	</p>
 	</div>
+
+	
 </body>
 	<script>
 
