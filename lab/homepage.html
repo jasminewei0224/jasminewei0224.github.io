@@ -130,6 +130,7 @@
 		background-color: #AB9999;
 		left: -220px;
 		transition: all 500ms linear;
+		z-index: 100;
 	}
 
 	#sidebar.active{
@@ -140,6 +141,7 @@
 		color: #dddddd;
 		list-style: none;
 		padding: 15px 10px;
+		z-index: 100;
 	}
 
 	#sidebar .toggle-btn{
@@ -157,6 +159,10 @@
 		border-radius: 5px;
 	}
 
+	.new{
+		width: 7vw;
+		position: fixed;
+	}
 
 
 </style>
@@ -172,7 +178,11 @@
 			<span></span>
 		</div>
 		<ul>
-			<li>Home</li>
+			<li id="home">
+				<a href="homepage.html">
+					Home
+				</a>
+			</li>
 			<li id="studio">
 				<a href="interaction_studio.html">
 				Interaction Studio
@@ -229,15 +239,38 @@
 
 	
 
-	$("html").click(function() {
-		// console.log("ready")
-  	$(".flower").show();
-	});
+	// $("html").click(function() {
+	// 	// console.log("ready")
+ //  	$(".flower").show();
+	// });
 
 	function toggleSidebar(){
 		document.getElementById("sidebar").classList.toggle('active');
 	}
 
+	var counter = 0;
+
+	$("html").click(function(){
+		var flower = $("<img src='flower.svg' class='new'>").css({"left": event.pageX + 'px',"top": event.pageY + 'px'
+		});
+		if(counter == 0){
+			$("body").append(flower);
+		} if (counter == 1){
+			$("body").append(flower.css('width', '5vw', 'color','#B2BCD5'));
+		} if (counter == 2) {
+			$("body").append(flower.css('width', '10vw'));
+		} if( counter == 3){
+			$("body").append(flower.css('width', '3.5vw'));
+		} if( counter == 4){
+			$("body").append(flower.css('width', '6vw'));
+		} if( counter == 5){
+			$("body").append(flower.css('width', '2.5vw'));
+		}
+			if( counter == 6){
+			counter=0;
+		}
+		counter++;
+	});
 	
 	
 

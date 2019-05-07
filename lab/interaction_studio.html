@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Core Studio Interaction</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 
 	<style>
 		html{
@@ -33,6 +33,7 @@
 		background-color: #AB9999;
 		left: -220px;
 		transition: all 500ms linear;
+		z-index: 100
 		}
 
 		#sidebar.active{
@@ -88,9 +89,9 @@
 			position: fixed;
 		}
 
-		#Testament:hover {
+		/*#Testament:hover {
 			background: url("TheBrandNewTestament.mp4");
-		}
+		}*/
 
 		.arrow{
 			height: 3vh;
@@ -121,7 +122,11 @@
 			<span></span>
 		</div>
 		<ul>
-			<li>Home</li>
+			<li id="home">
+				<a href="homepage.html">
+					Home
+				</a>
+			</li>
 			<li id="studio">
 				<a href="interaction_studio.html">
 				Interaction Studio
@@ -136,7 +141,7 @@
 		
 	</div>
 
-<img src="The Brand New Testament_dialogue-05.jpg" class="Projects" id="Testament">
+<video src="TheBrandNewTestament.mp4" class="Projects" id="Testament" loop ></video>
 <img src="Collection.jpg" class="Projects" id="Collection">
 
 <a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="_blank">
@@ -149,14 +154,18 @@
 
 </body>
 
-<script>
-	$("#Testament").mouseover(function() {
-  	$("#Testament").attr('src == mp4', 'TheBrandNewTestament.mp4');
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+	$("#Testament").hover(function() {
+  	$("#Testament").play();
 	});
 
 	function toggleSidebar(){
 		document.getElementById("sidebar").classList.toggle('active');
 	}
-
+	
 </script>
+	
+
+
 </html>
