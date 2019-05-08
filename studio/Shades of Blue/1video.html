@@ -112,7 +112,7 @@
 </head>
 <body>
 	
-	<video loop autoplay muted class="video">
+	<video loop autoplay="true" preload="true" muted="true" playsinline class="video">
 
 		<source src="1.mp4" type=""video/mp4>
 			
@@ -174,11 +174,19 @@
 		}, 600)
 
 		console.log($("body, html").scrollTop())
+
+		// onload, we want to force the video to play:
+		$(".video").attr("muted", true)
+		$(".video").get(0).play()
 		
 
 		$(document).scroll(function(){
 
 			var percentageScrolled = $("body, html").scrollTop()/($("body").innerHeight() - $(window).innerHeight())
+
+			if(window.outerWidth < 768){
+				percentageScrolled = $(window).scrollTop()/($("body").innerHeight() - $(window).innerHeight())				
+			}
 
 			if (percentageScrolled<0.5) {
 				$("#ourtext").css({"opacity" : 0})

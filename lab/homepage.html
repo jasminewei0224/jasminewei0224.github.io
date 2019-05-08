@@ -5,17 +5,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 
-/*	.top_block{
-		background-color: #AB9999;
-		width: 100%;
-		height: 15%;
-		margin: 0;
-		padding: 0;
-		display: block;
-		position: fixed;
-		left: 0;
-		font-family: Arial;
-	}*/
 
 	.text-block{
 		position: absolute;
@@ -35,11 +24,6 @@
 		font-size: 13px;
 	}
 
-	/*.container{
-		position: absolute;
-		font-family: Arial;
-	}*/
-
 	a{
 		color: white;
 		padding-right: 20px;
@@ -54,11 +38,22 @@
 		position: fixed;
 		top: 34%;
 		left: 33%;
-		/*right: 50vw;
-		left: 50vw;*/
 		text-align: center;
 		z-index: 1;
 		display: block;
+		animation: fadeInOut 5s forwards;
+		animation-timing-function: ease-in-out; 
+		animation-delay: 5s;
+	}
+
+	@keyframes fadeInOut{
+		from{
+				opacity: 1;
+			}
+
+			to{
+				opacity: 0;
+			}
 	}
 
 	h1{
@@ -164,6 +159,39 @@
 		position: fixed;
 	}
 
+	.Interaction{
+		font-size: 50px;
+		font-size: avenir;
+		color: white;
+		position: fixed;
+		animation: fadeIn 2s forwards;
+		animation-timing-function: ease-in-out; 
+		animation-delay: 7s;
+		opacity: 0;
+	}
+
+	@keyframes fadeIn{
+		from{
+				opacity: 0;
+			}
+
+			to{
+				opacity: 1;
+			}
+	}
+
+	#studio{
+		position: fixed;
+		top: 45%;
+		left: 18%;
+	}
+
+	#lab{
+		position: fixed;
+		top: 45%;
+		left: 55%;
+	}
+
 
 </style>
 
@@ -171,12 +199,12 @@
 </head>
 
 <body>
-	<div id="sidebar">
+	<!-- <div id="sidebar">
 		<div class="toggle-btn" onclick="toggleSidebar()">
 			<span></span>
 			<span></span>
-			<span></span>
-		</div>
+			<span></span> -->
+		<!-- </div>
 		<ul>
 			<li id="home">
 				<a href="homepage.html">
@@ -193,8 +221,12 @@
 				Interaction Lab
 				</a>
 			</li>
-		</ul>
-		
+		</ul> -->
+			
+			
+				<div class="Interaction"id="studio">Interaction Studio</div>
+				<div class="Interaction" id="lab">Interaction Lab</div>
+			
 	</div>
 
 

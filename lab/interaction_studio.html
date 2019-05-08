@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Core Studio Interaction</title>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<style>
 		html{
@@ -108,6 +108,11 @@
 			left: 83vw;
 			top: 73vh;
 		}
+
+		.new{
+		width: 3vw;
+		position: fixed;
+		}
 	</style>
 
 	<h1>Projects</h1>
@@ -142,7 +147,8 @@
 	</div>
 
 <video src="TheBrandNewTestament.mp4" class="Projects" id="Testament" loop ></video>
-<img src="Collection.jpg" class="Projects" id="Collection">
+
+<video src="Collection.mp4" class="Projects" id="Collection"></video>
 
 <a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="_blank">
 	<img src="arrow.png" class="arrow" id="arrow1">
@@ -154,16 +160,37 @@
 
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 
-	$("#Testament").hover(function() {
-  	$("#Testament").play();
+<script>
+
+	$("html").click(function(){
+		var flower = $("<img src='flower.svg' class='new'>").css({"left": event.pageX + 'px',"top": event.pageY + 'px'
+		});
+		$("body").append(flower);
+	});
+
+	$("#Testament").mouseover(function() {
+  	$("#Testament")[0].play();
+	});
+
+	$("#Testament").mouseout(function() {
+  	$("#Testament")[0].pause();
+	});
+
+	$("#Collection").mouseover(function() {
+  	$("#Collection")[0].play();
+	});
+
+	$("#Collection").mouseout(function() {
+  	$("#Collection")[0].pause();
 	});
 
 	function toggleSidebar(){
 		document.getElementById("sidebar").classList.toggle('active');
 	}
+</script>
 	
+
 </script>
 	
 
