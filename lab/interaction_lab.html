@@ -1,7 +1,142 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
+
+	<title>Core Studio Interaction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style>
+		html{
+			font-family: sans-serif;
+			color: white;
+			box-sizing: border-box;
+			background-color: #dddddd;
+		}
+
+		#title{
+			position: fixed;
+			width: 20vw;
+			left: 40vw;
+			top: 10vh;
+		}
+
+
+		.Projects{
+			width: 30vw;
+			margin: 10vw;
+		}
+
+		#Collection{
+			top: 6vh;
+			left: 45vw;
+			position: fixed;
+		}
+
+
+		#Testament{
+			top: 6vh;
+			left: 5vw;
+			position: fixed;
+		}
+
+		#cdlecture{
+			left: 5vw;
+			top: 45vh;
+			position: fixed;
+		}
+
+		#shadesofblue{
+			width: 10vw;
+			left: 55vw;
+			top: 63vh;
+			position: fixed;
+		}
+
+		.new{
+		width: 3vw;
+		position: fixed;
+		}
+	</style>
+
+	
+</head>
+
+<body>
+
+
+
+		<img src="lab_2.svg" id="title">
+		
+	</div>
+<a href="https://jasminewei0224.github.io/lab/positioning_exercise.html" target="blank">
+	<video src="exercise1.mp4" class="Projects" id="Testament" loop ></video>
+</a>
+
+<a href="https://jasminewei0224.github.io/lab/week%204/drink.html" target="blank">
+	<video src="exercise2.mp4" class="Projects" id="Collection"></video>
+</a>
+
+<a href="https://jasminewei0224.github.io/lab/week%205/week5hw.html">
+	<video src="exercise3.mp4" class="Projects" id="cdlecture"></video>
+</a>
+
+<!-- <a href="jasminewei0224.github.io/studio/Shades of Blue/ShadesofBlue.html">
+	<video src="shadesofblue.mp4" id="shadesofblue"> </video>
+</a> -->
+
+
+</body>
+
+
+<script>
+
+	$("html").click(function(){
+		var flower = $("<img src='flower.svg' class='new'>").css({"left": event.pageX + 'px',"top": event.pageY + 'px'
+		});
+		$("body").append(flower);
+	});
+
+	$("#Testament").mouseover(function() {
+  	$("#Testament")[0].play();
+	});
+
+	$("#Testament").mouseout(function() {
+  	$("#Testament")[0].pause();
+	});
+
+	$("#Collection").mouseover(function() {
+  	$("#Collection")[0].play();
+	});
+
+	$("#Collection").mouseout(function() {
+  	$("#Collection")[0].pause();
+	});
+
+	$("#cdlecture").mouseover(function() {
+  	$("#cdlecture")[0].play();
+	});
+
+	$("#cdlecture").mouseout(function() {
+  	$("#cdlecture")[0].pause();
+	});
+
+	$("#shadesofblue").mouseover(function() {
+  	$("#shadesofblue")[0].play();
+	});
+
+	$("#shadesofblue").mouseout(function() {
+  	$("#shadesofblue")[0].pause();
+	});
+
+	function toggleSidebar(){
+		document.getElementById("sidebar").classList.toggle('active');
+	}
+</script>
+	
+
+</script>
+	
+
+
+</html></title>
 </head>
 <body>
 

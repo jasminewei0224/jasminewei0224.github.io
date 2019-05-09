@@ -12,55 +12,6 @@
 			background-color: #dddddd;
 		}
 
-		body{
-			margin: 0;
-		}
-
-		a{
-		color: white;
-		padding-right: 20px;
-		text-decoration: none;
-		}
-
-		a:hover{
-		color: #789aa0;
-		}
-
-		#sidebar{
-		position: fixed;
-		width: 220px;
-		height: 100%;
-		background-color: #AB9999;
-		left: -220px;
-		transition: all 500ms linear;
-		z-index: 100
-		}
-
-		#sidebar.active{
-		left: 0px;
-		}
-
-		#sidebar ul li{
-		color: #dddddd;
-		list-style: none;
-		padding: 15px 10px;
-		}
-
-		#sidebar .toggle-btn{
-		position: absolute;
-		left: 250px;
-		top: 20px;
-		}
-	
-		#sidebar .toggle-btn span{
-		display: block;
-		width: 30px;
-		height: 5px;
-		background: #AB9999;
-		margin: 5px 0 ;
-		border-radius: 5px;
-		}
-
 		#title{
 			position: fixed;
 			width: 20vw;
@@ -75,36 +26,29 @@
 		}
 
 		#Collection{
-			top: 12vh;
+			top: 6vh;
 			left: 45vw;
 			position: fixed;
 		}
 
 
 		#Testament{
-			top: 12vh;
+			top: 6vh;
 			left: 5vw;
 			position: fixed;
 		}
 
-		/*#Testament:hover {
-			background: url("TheBrandNewTestament.mp4");
-		}*/
-
-		.arrow{
-			height: 3vh;
+		#cdlecture{
+			left: 5vw;
+			top: 45vh;
+			position: fixed;
 		}
 
-		#arrow1{
+		#shadesofblue{
+			width: 10vw;
+			left: 55vw;
+			top: 63vh;
 			position: fixed;
-			left: 43vw;
-			top: 73vh;
-		}
-
-		#arrow2{
-			position: fixed;
-			left: 83vw;
-			top: 73vh;
 		}
 
 		.new{
@@ -118,29 +62,7 @@
 
 <body>
 
-	<!-- <div id="sidebar">
-		<div class="toggle-btn" onclick="toggleSidebar()">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<ul>
-			<li id="home">
-				<a href="homepage.html">
-					Home
-				</a>
-			</li>
-			<li id="studio">
-				<a href="interaction_studio.html">
-				Interaction Studio
-				</a>
-			</li>
-			<li id="lab">
-				<a href="interaction_lab.html">
-				Interaction Lab
-				</a>
-			</li>
-		</ul> -->
+
 
 		<img src="studio_2.svg" id="title">
 		
@@ -150,16 +72,17 @@
 </a>
 
 <a href="https://jasminewei0224.github.io/collection.html" target="blank">
-<video src="Collection.mp4" class="Projects" id="Collection"></video>
+	<video src="Collection.mp4" class="Projects" id="Collection"></video>
 </a>
 
-<!-- <a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="_blank">
-	<img src="arrow.png" class="arrow" id="arrow1">
+<a href="https://jasminewei0224.github.io/studio/cd%20lecture/cdlecture.html">
+	<video src="cdlecture.mp4" class="Projects" id="cdlecture"></video>
 </a>
 
-<a href="https://jasminewei0224.github.io/collection.html" target="_blank">
-<img src="arrow.png" class="arrow" id="arrow2">	
-</a> -->
+<a href="jasminewei0224.github.io/studio/Shades of Blue/ShadesofBlue.html">
+	<video src="shadesofblue.mp4" id="shadesofblue"> </video>
+</a>
+
 
 </body>
 
@@ -186,6 +109,22 @@
 
 	$("#Collection").mouseout(function() {
   	$("#Collection")[0].pause();
+	});
+
+	$("#cdlecture").mouseover(function() {
+  	$("#cdlecture")[0].play();
+	});
+
+	$("#cdlecture").mouseout(function() {
+  	$("#cdlecture")[0].pause();
+	});
+
+	$("#shadesofblue").mouseover(function() {
+  	$("#shadesofblue")[0].play();
+	});
+
+	$("#shadesofblue").mouseout(function() {
+  	$("#shadesofblue")[0].pause();
 	});
 
 	function toggleSidebar(){
