@@ -44,7 +44,7 @@
 			opacity: 0.9;
 		}
 
-		#left{
+		/*#left{
 			position: fixed;
 			width: 2vw;
 			left: 5vw;
@@ -54,7 +54,7 @@
 
 		#left:hover{
 			opacity: 0.9;
-		}
+		}*/
 
 		
 
@@ -257,7 +257,7 @@
 </a>
 </h1>
 </div>
-<img src="arrow1.png" id="right">
+		<img src="arrow1.png" id="right">
 		<img src="arrow2.png" id="left">
 		<img src="flower-white.png" type="png" class="flower" width="70vw">
 </body>
@@ -326,10 +326,6 @@
 	});
 
 	$("#right").click(function(){
-
-// to make a button going the other way:
-// swap out next for prev
-// swap out animated css values for their opposite (either "right" or 50% instead of -50)
 
 	$(".box").each(function(){
   	if($(this).hasClass("current")){
