@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Give me more sushi!</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+			background-color: #fff6dc;
+		}
+
+		.strip{
+			width: 100%;
+			position: absolute;
+			top: 75%
+		}
+
+		.ring{
+			position: fixed;
+			width: 5%;
+			top: 2%;
+			left: 2%;
+		}
+
+		#img0{
+			width: 10%;
+			position: fixed;
+			top: 55%;
+			left: 80%;
+
+		}
+	</style>
+</head>
+<body>
+	<img src="strip.png" type="png" class="strip">
+	<img src="ring.png" type="png" class="ring">
+	<img src="sushi0.png" type="png" id="img0">
+</body>
+
+<script type="text/javascript">
+	var imgList = ["sushi0.png", "sushi1.png", "sushi2.png", "sushi3.png"];
+	var counter = 0;
+
+	$(".ring").click(function(){
+		var image = document.getElementById("img0");
+		var url = imgList[counter];
+		var limit = imgList.length;
+
+		counter++;
+
+		image.src = url;
+
+		if(counter == limit){
+			counter = 0;
+		}
+	});
+</script>
+</html>

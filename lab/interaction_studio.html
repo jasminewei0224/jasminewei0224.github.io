@@ -3,58 +3,211 @@
 <head>
 	<title>Core Studio Interaction</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 	<style>
 		html{
 			font-family: sans-serif;
-			color: white;
-			box-sizing: border-box;
-			background-color: #dddddd;
+			
+			
+			padding: 0;
+			margin: 0;
 		}
 
-		#title{
+		/*body{
+			padding: 0;
+			margin: 0;
+		}*/
+
+		
+
+		#container {
+	    position: absolute;
+	    margin: 0px;
+	    padding: 0px;
+	    width: 80%;
+	    height: 100%;
+	    overflow: hidden;
+		}
+
+		
+
+		#right{
 			position: fixed;
-			width: 20vw;
-			left: 40vw;
-			top: 10vh;
+			width: 2vw;
+			left: 95vw;
+			top: 45vh;
+			opacity: 0.3;
 		}
 
+		#right:hover{
+			opacity: 0.9;
+		}
+
+		#left{
+			position: fixed;
+			width: 2vw;
+			left: 5vw;
+			top: 45vh;
+			opacity: 0.3;
+		}
+
+		#left:hover{
+			opacity: 0.9;
+		}
+
+		
 
 		.Projects{
 			width: 30vw;
-			margin: 10vw;
+			
+		}
+
+		#Testament{
+			top: 50vh;
+			left: 25vw;
+			position: absolute;
+		}
+
+		.number{
+			position: absolute;
+			font-size: 95vh;
+			color: white;
+			opacity: 0.6;
+			left: 50vw;
+			top: 0%;
+		}
+
+		.number2{
+			position: absolute;
+			font-size: 95vh;
+			color: white;
+			opacity: 0.6;
+			left: 25vw;
+			top: -20%;
+		}
+
+		#title{
+			position: absolute;
+			width: 20vw;
+			left: 56vw;
+			top: 30vh;
+			transform: rotate(-20deg);
+		}
+
+		#section{
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+		}
+
+
+
+		#section2{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			cursor: pointer;
+		}
+
+		#title2{
+			position: absolute;
+			width: 20vw;
+			left: 36vw;
+			top: 30vh;
+			transform: rotate(-20deg);
 		}
 
 		#Collection{
-			top: 6vh;
-			left: 45vw;
-			position: fixed;
+			top: 50vh;
+			left: 0vw;
+			position: absolute;
 		}
 
+		.number2{
+			position: absolute;
+			font-size: 95vh;
+			color: white;
+			opacity: 0.6;
+			left: 25vw;
+			top: -20%;
+		}
 
-		#Testament{
-			top: 6vh;
-			left: 5vw;
-			position: fixed;
+		#section3{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			cursor: pointer;
 		}
 
 		#cdlecture{
 			left: 5vw;
 			top: 45vh;
-			position: fixed;
+			position: absolute;
+		}
+
+		#title3{
+			position: absolute;
+			width: 20vw;
+			left: 36vw;
+			top: 30vh;
+			transform: rotate(-20deg);
+		}
+
+		.number3{
+			position: absolute;
+			font-size: 95vh;
+			color: white;
+			opacity: 0.6;
+			left: 25vw;
+			top: -20%;
+		}
+
+		#section4{
+			position: absolute;
+			top: 0;
+			left: 100%;
+			cursor: pointer;
 		}
 
 		#shadesofblue{
-			width: 10vw;
-			left: 55vw;
-			top: 63vh;
-			position: fixed;
+			width: 20vw;
+			left: 0vw;
+			top: 25vh;
+			position: absolute;
+		}
+
+		.number4{
+			position: absolute;
+			font-size: 95vh;
+			color: white;
+			opacity: 0.6;
+			left: 20vw;
+			top: 0;
+		}
+
+		#title4{
+			position: absolute;
+			width: 20vw;
+			left: 36vw;
+			top: 30vh;
+			transform: rotate(-20deg);
 		}
 
 		.new{
 		width: 3vw;
 		position: fixed;
 		}
+
+		#bg{
+			position: fixed;
+			width: 100%;
+			z-index: -100;
+			
+		}
+		
+
 	</style>
 
 	
@@ -62,37 +215,82 @@
 
 <body>
 
-
-
-		<img src="studio_2.svg" id="title">
 		
-	</div>
-<a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="blank">
-	<video src="TheBrandNewTestament.mp4" class="Projects" id="Testament" loop ></video>
-</a>
+		
+		
+		
+		
 
-<a href="https://jasminewei0224.github.io/collection.html" target="blank">
-	<video src="Collection.mp4" class="Projects" id="Collection"></video>
-</a>
 
+	<div id="cotainer">
+		<img src="bg.JPG" id="bg">
+<h1 id="section" class="box current">
+	<div class="number">1</div>
+		<img src="Dialogue.png" id="title">
+	<a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="blank">
+		<video src="TheBrandNewTestament.mp4" class="Projects" id="Testament" loop ></video>
+	</a>
+</h1>
+
+<h1 id="section2" class="box">
+	<div class="number2">2</div>
+	<img src="collection.png" id="title2">
+	<a href="https://jasminewei0224.github.io/collection.html" target="blank">
+		<video src="Collection.mp4" class="Projects" id="Collection"></video></a>
+</h1>
+
+
+<h1 id="section3" class="box">
+	<div class="number3">3</div>
+	<img src="poster.png" id="title3">
 <a href="https://jasminewei0224.github.io/studio/cd%20lecture/cdlecture.html">
 	<video src="cdlecture.mp4" class="Projects" id="cdlecture"></video>
 </a>
+</h1>
 
+
+<h1 id="section4" class="box">
+	<div class="number4">4</div>
+	<img src="shadesofblue.png" id="title4">
 <a href="jasminewei0224.github.io/studio/Shades of Blue/ShadesofBlue.html">
 	<video src="shadesofblue.mp4" id="shadesofblue"> </video>
 </a>
-
-
+</h1>
+</div>
+<img src="arrow1.png" id="right">
+		<img src="arrow2.png" id="left">
+		<img src="flower-white.png" type="png" class="flower" width="70vw">
 </body>
 
 
 <script>
 
+	var counter = 0;
+
 	$("html").click(function(){
 		var flower = $("<img src='flower.svg' class='new'>").css({"left": event.pageX + 'px',"top": event.pageY + 'px'
 		});
-		$("body").append(flower);
+		if(counter == 0){
+			$("body").append(flower);
+		} if (counter == 1){
+			$("body").append(flower.css('width', '5vw'));
+			$("body").append(flower.css('opacity', '0.7'));
+		} if (counter == 2) {
+			$("body").append(flower.css('width', '10vw'));
+			$("body").append(flower.css('opacity', '0.3'));
+		} if( counter == 3){
+			$("body").append(flower.css('width', '3.5vw'));
+		} if( counter == 4){
+			$("body").append(flower.css('width', '6vw'));
+			$("body").append(flower.css('opacity', '0.4'));
+		} if( counter == 5){
+			$("body").append(flower.css('width', '2.5vw'));
+			$("body").append(flower.css('opacity', '0.8'));
+		}
+			if( counter == 6){
+			counter=0;
+		}
+		counter++;
 	});
 
 	$("#Testament").mouseover(function() {
@@ -127,9 +325,39 @@
   	$("#shadesofblue")[0].pause();
 	});
 
-	function toggleSidebar(){
-		document.getElementById("sidebar").classList.toggle('active');
-	}
+	$("#right").click(function(){
+
+// to make a button going the other way:
+// swap out next for prev
+// swap out animated css values for their opposite (either "right" or 50% instead of -50)
+
+	$(".box").each(function(){
+  	if($(this).hasClass("current")){
+
+
+      var thisBox = $(this)
+      var thisNextBox = $(this).next()
+
+    	 $(this).animate({
+            left: '-50%'
+        }, 500, function() {
+            $(this).css('left', '150%');
+            $(this).appendTo('#container');
+						thisBox.removeClass("current")
+        });
+
+        $(this).next().animate({
+            left: '30%'
+        }, 500, function(){
+					thisNextBox.addClass("current")
+        });
+    }
+  });
+
+
+
+
+})
 </script>
 	
 
