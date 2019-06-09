@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jasmine Wei's Portfolio Site</title>
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<style type="text/css">
+html{
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-family: avenir;
+	overflow-x: hidden;
+	background-color: #8C9389;
+}
+html ::selection{
+	background: black;
+}
+body{
+	background-color: #8C9389;
+}
+
+.title{
+	color: white;
+	font-family: avenir;
+	font-weight: bold;
+	font-size: 80px;
+	position: absolute;
+	top: 3vh;
+	left: 3vw;
+/*z-index: 100;*/
+}
+
+.jasminePhoto{
+	width: 10vw;
+	position: absolute;
+	top: 10vh;
+	left: 10vw;
+}
+
+.bio{
+	color: white;
+	font-family: avenir;
+	font-size: 15px;
+	position: absolute;
+	top: 75vh;
+	left: 3vw;
+}
+
+ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+ul li:hover{
+	font-size: 17px;
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+a:visited{
+	color: black;
+}
+.portfolio{
+	color: white;
+	text-decoration: none;
+	font-family: avenir;
+	font-size: 15px;
+	position: absolute;
+	top: 5vh;
+	left: 90vw;
+}
+
+#portfolioTitle{
+	font-size: 23px;
+	text-decoration: underline;
+}
+
+.contact{
+	color: white;
+	font-family: avenir;
+	font-size: 15px;
+	position: absolute;
+	top: 75vh;
+	left: 90vw;
+
+}
+
+#contactTitle{
+	font-size: 23px;
+	text-decoration: underline;
+}
+#email{
+	color: white;
+	font-family: avenir;
+/*top: 80vh;
+left: 90vw;*/
+}
+
+#graphics{
+	position: absolute;
+	text-decoration: none;
+	top: 99.9vh;
+	left: 0;
+	width: 150vw;
+	height: 100vh;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+#arrow{
+	position: absolute;
+	top: 90vh;
+	left: 95vw;
+	height: 2.5vw;
+}
+
+#subtitle{
+	font-weight: bold;
+	font-size: 50px;
+	position: absolute;
+	top: 3vh;
+	left: 3vw;
+	letter-spacing: 2px;
+}
+
+#web_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 40vh;
+	left: -1.8vw;
+}
+
+#web_sidebar:hover{
+	opacity: 0.6;
+}
+
+#graphics_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 40vh;
+	left: 0vw;
+}
+
+#web_sidebar:hover{
+	opacity: 0.6;
+}
+
+#homepage_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 20vh;
+	left: -0.6vw;
+}
+
+#homepage_sidebar:hover{
+	opacity: 0.6;
+}
+
+#arts_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 60vh;
+	left: 1vw;
+}
+
+#arts_sidebar:hover{
+	opacity: 0.6;
+}
+
+#web_sidebar_2{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 60vh;
+	left:-1.8vw;
+}
+
+#others_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 80vh;
+	left: 0.2vw;
+}
+
+#others_sidebar:hover{
+	opacity: 0.6;
+}
+
+#arts_sidebar_2{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 80vh;
+	left: 1vw;
+}
+
+#arts_sidebar_2:hover{
+	opacity: 0.6;
+}
+
+#overlay1{
+	width: 15vw;
+	height: 15.5vw;
+	position: absolute;
+	top: 0vh;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+.myTypoDic{
+	width: 15vw;
+	position: absolute;
+	left: 15vw;
+	top: 17vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.myTypoDic:hover{
+	filter: grayscale(0);
+}
+
+#myTypoDic{
+	width: 15vw;
+	position: absolute;
+}
+
+#overlay1:hover{
+	opacity: 0;
+}
+
+.smalltext{
+	font-size: 12px;
+}
+
+#myTypoDicText{
+	position: absolute;
+	left: 15vw;
+	top: 47vh;
+	line-height: 1.5;
+}
+
+.midnightDiner{
+	width: 13vw;
+	position: absolute;
+	left: 35vw;
+	top: 17vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+#midnightDiner{
+	width: 13vw;
+	position: absolute;
+	
+}
+
+.midnightDiner:hover{
+	filter: grayscale(0);
+}
+
+#overlay2{
+	width: 13vw;
+	height: 35vh;
+	position: absolute;
+	top: 0vh;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 100;
+}
+
+#overlay2:hover{
+	opacity: 0;
+	
+}
+
+#midnightDinerText{
+	line-height: 1.5;
+	position: absolute;
+	left: 35vw;
+	top: 55vh;
+}
+
+#typoByHand{
+	width: 18vw;
+	position: absolute;
+	left: 15vw;
+	top: 52vh;
+	z-index: 0;
+}
+
+#overlay3{
+	width: 18vw;
+	height: 18vh;
+	position: absolute;
+	left: 15vw;
+	top: 52vh;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#typoByHandText{
+	line-height: 1.5;
+	position: absolute;
+	left: 15vw;
+	top: 72vh;
+}
+
+#overlay3:hover{
+	opacity: 0;
+}
+
+#overlay4{
+	width: 25vw;
+	height: 13vw;
+	position: absolute;
+	top: 20%;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay4:hover{
+	opacity: 0;
+}
+
+.sTom{
+	width: 25vw;
+	position: absolute;
+	left: 35vw;
+	top: 65vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.sTom:hover{
+	filter: grayscale(0);
+}
+
+#sTom{
+	width: 25vw;
+	position: absolute;
+}
+
+#sTomText{
+	line-height: 1.5;
+	position: absolute;
+	left: 35vw;
+	top: 88vh;
+}
+
+#overlay5{
+	width: 15vw;
+	height: 15vw;
+	position: absolute;
+	top: 20%;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay5:hover{
+	opacity: 0;
+}
+
+.futura{
+	width: 15vw;
+	position: absolute;
+	left: 53vw;
+	top: 17vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.futura:hover{
+	filter: grayscale(0);
+}
+
+#futura{
+	width: 15vw;
+	position: absolute;
+}
+
+#futuraText{
+	line-height: 1.5;
+	position: absolute;
+	left: 53vw;
+	top: 44vh;
+}
+
+#overlay6{
+	width: 13vw;
+	height: 17.5vw;
+	position: absolute;
+	top: 20%;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay6:hover{
+	opacity: 0;
+}
+
+.festival{
+	width: 13vw;
+	position: absolute;
+	left: 65vw;
+	top: 56.5vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.festival:hover{
+	filter: grayscale(0);
+}
+
+#festival{
+	width: 13vw;
+	position: absolute;
+}
+
+#festivalText{
+	line-height: 1.5;
+	position: absolute;
+	left: 65vw;
+	top: 88vh;
+}
+
+#overlay7{
+	width: 15vw;
+	height: 17.5vw;
+	position: absolute;
+	top: 20%;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay7:hover{
+	opacity: 0;
+}
+
+.timebook{
+	width: 15vw;
+	position: absolute;
+	left: 73vw;
+	top: 17vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.timebook:hover{
+	filter: grayscale(0);
+}
+
+#timebook{
+	width: 15vw;
+	position: absolute;
+}
+
+#timebookText{
+	line-height: 1.5;
+	position: absolute;
+	left: 73vw;
+	top: 44vh;
+}
+
+#overlay8{
+	width: 13vw;
+	height: 17.5vw;
+	position: absolute;
+	top: 20%;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay8:hover{
+	opacity: 0;
+}
+
+.ohMyNyc{
+	width: 10vw;
+	position: absolute;
+	left: 15vw;
+	top: 77vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.ohMyNyc:hover{
+	filter: grayscale(0);
+}
+
+#ohMyNyc{
+	width: 10vw;
+	position: absolute;
+}
+
+#ohMyNycText{
+	line-height: 1.5;
+	position: absolute;
+	left: 15vw;
+	top: 95vh;
+}
+
+#overlay9{
+	width: 10vw;
+	height: 10vw;
+	position: absolute;
+	top: 20%;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay9:hover{
+	opacity: 0;
+}
+
+.postcards{
+	width: 10vw;
+	position: absolute;
+	left: 83vw;
+	top: 69vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.postcards:hover{
+	filter: grayscale(0);
+}
+
+#postcards{
+	width: 10vw;
+	position: absolute;
+}
+
+#postcardsText{
+	line-height: 1.5;
+	position: absolute;
+	left: 15vw;
+	top: 95vh;
+}
+
+#web{
+	position: absolute;
+	text-decoration: none;
+	top: 200vh;
+	left: 0;
+	width: 150vw;
+	height: 100vh;
+}
+
+#overlay_dialogue{
+	position: absolute;
+	width: 25vw;
+	height: 25vh;
+	top: 0;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_dialogue:hover{
+	opacity: 0;
+}
+
+.dialogue{
+	position: absolute;
+	top: 15vh;
+	left: 15vw;
+	filter: grayscale(100%);
+}
+
+.dialogue:hover{
+	filter: grayscale(0);
+}
+
+#dialogue{
+	width: 25vw;
+}
+
+#dialogueText{
+	position: absolute;
+	left: 15vw;
+	top: 40vh;
+}
+
+#overlay_collection{
+	position: absolute;
+	width: 25vw;
+	height: 27vh;
+	left: 45vw;
+	top: 0;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_collection:hover{
+	opacity: 0;
+}
+
+.collection{
+	position: absolute;
+	top: 15vh;
+	left: 45vw;
+	filter: grayscale(100%);
+}
+
+.collection:hover{
+	filter: grayscale(0);
+}
+
+#collection{
+	width: 25vw;
+}
+
+#collectionText{
+	position: absolute;
+	left: 45vw;
+	top: 42vh;
+}
+
+#overlay_SOB{
+	position: absolute;
+	width: 15vw;
+	height: 27vh;
+	left: 75vw;
+	top: 0;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+#overlay_SOB:hover{
+	opacity: 0;
+}
+
+.SOB{
+	position: absolute;
+	top: 15vh;
+	left: 75vw;
+	filter: grayscale(100%);
+}
+
+.SOB:hover{
+	filter: grayscale(0);
+}
+
+#SOB{
+	width: 15vw;
+}
+
+#SOBText{
+	position: absolute;
+	left: 75vw;
+	top: 62vh;
+}
+
+#overlay_cdlecture{
+	position: absolute;
+	width: 25vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_cdlecture:hover{
+	opacity: 0;
+}
+
+.cdlecture{
+	position: absolute;
+	top: 50vh;
+	left: 15vw;
+	filter: grayscale(100%);
+}
+
+.cdlecture:hover{
+	filter: grayscale(0);
+}
+
+#cdlecture{
+	width: 25vw;
+}
+
+#cdlectureText{
+	position: absolute;
+	left: 15vw;
+	top: 73vh;
+}
+
+#overlay_pie{
+	position: absolute;
+	width: 25vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_pie:hover{
+	opacity: 0;
+}
+
+.pie{
+	position: absolute;
+	top: 50vh;
+	left: 45vw;
+	filter: grayscale(100%);
+}
+
+.pie:hover{
+	filter: grayscale(0);
+}
+
+#pie{
+	width: 25vw;
+}
+
+#pieText{
+	position: absolute;
+	left: 45vw;
+	top: 75vh;
+}
+
+#arts{
+	position: absolute;
+	text-decoration: none;
+	top: 300vh;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.animation{
+	position: absolute;
+	top: 17vh;
+	left: 15vw;
+	filter: grayscale(100%);
+}
+
+.animation:hover{
+	filter: grayscale(0);
+}
+
+#animation{
+	width: 25vw;
+}
+
+#overlay_animation{
+	position: absolute;
+	width: 25vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_animation:hover{
+	opacity: 0;
+}
+
+#animationText{
+	position: absolute;
+	left: 15vw;
+	top: 42vh;
+}
+
+.CellBook{
+	position: absolute;
+	top: 17vh;
+	left: 45vw;
+	filter: grayscale(100%);
+}
+
+.CellBook:hover{
+	filter: grayscale(0);
+}
+
+#overlay_CellBook{
+	position: absolute;
+	width: 14.5vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_CellBook:hover{
+	opacity: 0;
+}
+
+#CellBook{
+	width: 14.5vw;
+	z-index: 0;
+}
+
+#CellBookText{
+	position: absolute;
+	left: 45vw;
+	top: 42vh;
+}
+
+.illustration{
+	position: absolute;
+	top: 17vh;
+	left: 64vw;
+	filter: grayscale(100%);
+}
+
+.illustration:hover{
+	filter: grayscale(0);
+}
+
+#overlay_illustration{
+	position: absolute;
+	width: 20vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_illustration:hover{
+	opacity: 0;
+}
+
+#illustration{
+	width: 20vw;
+	z-index: 0;
+}
+
+#illustrationText{
+	position: absolute;
+	left: 64vw;
+	top: 42vh;
+	}
+
+#overlay_forever{
+	position: absolute;
+	width: 21vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_forever:hover{
+	opacity: 0;
+}
+
+#forever{
+	width: 21vw;
+	z-index: 0;
+}
+
+.forever{
+	position: absolute;
+	top: 50vh;
+	left: 15vw;
+	filter: grayscale(100%);
+}
+
+.forever:hover{
+	filter: grayscale(0);
+}
+
+#foreverText{
+	position: absolute;
+	left: 15vw;
+	top: 75vh;
+	}
+
+#overlay_plaster{
+	position: absolute;
+	width: 21vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_plaster:hover{
+	opacity: 0;
+}
+
+#plaster{
+	width: 16.2vw;
+	z-index: 0;
+}
+
+.plaster{
+	position: absolute;
+	top: 50vh;
+	left: 42vw;
+	filter: grayscale(100%);
+}
+
+.plaster:hover{
+	filter: grayscale(0);
+}
+
+#plasterText{
+	position: absolute;
+	left: 42vw;
+	top: 75vh;
+	}
+
+#others{
+	position: absolute;
+	text-decoration: none;
+	top: 400vh;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+</style>
+</head>
+<body>
+<div id="homepage">
+<p1 class="title">Jasmine </br>Wei</p1>
+<!-- <img src="jasmine2.png" class="jasminePhoto"> -->
+<p2 class="bio">Jasmine is a graphic designer based in </br>New York,
+currently attending Parsons</br> the New School for Design, in her junior year. </br>She works with many different medium and</br> design styles, including prints, interactive,</br> illustration. She also likes to integrate hand</br> drawn font/ illustration with digital medium. </p2>
+
+<p3 class="portfolio"><span id="portfolioTitle">Portfolio</span>
+<ul class="list">
+<li><a href="#graphics">Graphic/Prints</a></li>
+<li><a href="#web">Web/Interactive</a></li>
+<li><a href="#arts">Arts</a></li>
+<li><a href="#others">Others</a></li>
+</ul>
+</p3>
+
+<p4 class="contact"><span id="contactTitle">Contact</span>
+</br>
+<span id="email">weij525@</br>newschool.edu</span>
+</p4>
+</div>
+<div id="graphics">
+	<div id="subtitle">Graphics</div>
+	<span class="sidebar">
+		<div id="homepage_sidebar"><a href="#homepage">Homepage</a></div>
+		<div id="web_sidebar"><a href="#web">Web/Interactive</a></div>
+		<div id="arts_sidebar"><a href="#arts">Arts</a></div>
+		<div id="others_sidebar"><a href="#others">Others</a></div>
+		
+	</span>
+	<a href="#web"><img src="arrow.png" id="arrow"></a>
+	<div class="myTypoDic">
+		<div id="overlay1"></div>
+		<img src="myTypoDic.jpg" id="myTypoDic" >
+	</div>
+	<span class="smalltext" id="myTypoDicText">A set of cards that are designed to help </br>people learn about typography related </br>vocbulary terms.</span>
+
+	<div class="midnightDiner">
+		<div id="overlay2"></div>
+		<img src="midnightDinerCover.png" id="midnightDiner" >
+	</div>
+	<span class="smalltext" id="midnightDinerText">A series of books that are designed based</br> on the manuscript of a Japanese drama</br> - Midnight Diner.</span>
+
+	<div class="typoByHand">
+		<div id="overlay3"></div>
+		<img src="typoByHand.png" id="typoByHand">
+	</div>
+	<span class="smalltext" id="typoByHandText">Typography created using hand.</span>
+
+	<div class="sTom" cursor="pointer">
+		<div id="overlay4"></div>
+		<img src="single_to_multiple final_Page_1.jpg" id="sTom">
+	</div>
+	<span class="smalltext" id="sTomText">A series of found object with images gathered, I created the homeless.</br> These collages were designed with 6 short poems and put into a book.</span>
+
+	<div class="futura">
+		<div id="overlay5"></div>
+		<img src="futura_booklet_Page_01.jpg" id="futura">
+	</div>
+	<span class="smalltext" id="futuraText">An information booklet about a font - Futura.</span>
+
+	<div class="festival">
+		<div id="overlay6"></div>
+		<img src="coffee_festival_poster.png" id="festival">
+	</div>
+	<span class="smalltext" id="festivalText">Set of posters designed for </br>The Coffee Festival.</span>
+
+	<div class="timebook">
+		<div id="overlay7"></div>
+		<img src="time_book.png" id="timebook">
+	</div>
+	<span class="smalltext" id="timebookText">A metaphorical illustration book</br> that communicates a simple message - </br>communication is the key to relationships.</span>
+
+	<div class="ohMyNyc">
+		<div id="overlay8"></div>
+		<img src="Oh_My_NYC.png" id="ohMyNyc">
+	</div>
+	<span class="smalltext" id="ohMyNycText">A book about my top 5 places in New York.</span>
+
+	<div class="postcards">
+		<div id="overlay9"></div>
+		<img src="postcards_cover.png" id="postcards">
+	</div>
+	<span class="smalltext" id="postcardsText">A book about my top 5 places in New York.</span>
+</div>
+
+<div id="web">
+	<div id="subtitle">Websites</div>
+	<span class="sidebar">
+		<div id="homepage_sidebar"><a href="#homepage">Homepage</a></div>
+		<div id="graphics_sidebar"><a href="#graphics">Graphics</a></div>
+		<div id="arts_sidebar"><a href="#arts">Arts</a></div>
+		<div id="others_sidebar"><a href="#others">Others</a></div>
+	</span>
+	<a href="#arts"><img src="arrow.png" id="arrow"></a>
+	<div class="dialogue">
+		<a href="https://jasminewei0224.github.io/studio/dialogue/dialogue_1/dialogue.html" target="blank">
+		<div id="overlay_dialogue"></div>
+		<video src="TheBrandNewTestament.mp4" id="dialogue"></video>
+		</a>
+	</div>
+	<span class="smalltext" id="dialogueText"> A dialogue focus on a movie - The Brand New Testament,</br> that is between God and God's daughter.  </span>
+
+	<div class="collection">
+		<a href="https://jasminewei0224.github.io/collection.html" target="blank">
+		<div id="overlay_collection"></div>
+		<video src="collection.mp4" type="mp4" id="collection"></video>
+		</a>
+	</div>
+	<span class="smalltext" id="collectionText"> A digital playground that incorporate interaction, sound, and movement.</br> </span>
+
+	<div class="SOB">
+		<a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/" target="blank">
+		<div id="overlay_SOB"></div>
+		<video src="shadesofblue.mp4" id="SOB"></video>
+		</a>
+	</div>
+	<span class="smalltext" id="SOBText"> A meditating phone website </br>based on my trip to Greece.</br> </span>
+	
+	<div class="cdlecture">
+		<a href="https://jasminewei0224.github.io/studio/cd%20lecture/cdlecture.html" target="blank">
+		<div id="overlay_cdlecture"></div>
+		<video src="cdlecture.mp4" id="cdlecture"></video>
+		</a>
+	</div>
+	<span class="smalltext" id="cdlectureText"> Information website on a lecture of Tracy Ma.</br> </span>
+
+	<div class="pie">
+		<a href="https://jasminewei0224.github.io/creative%20computing/clock.html" target="blank">
+		<div id="overlay_pie"></div>
+		<video src="pie.mp4" id="pie"></video>
+		</a>
+	</div>
+	<span class="smalltext" id="pieText">A clock that moves every hour that got inspiration from a missing pie.</span>
+
+	</div>
+
+	<div id="arts">
+		<div id="subtitle">Arts</div>
+		<span class="sidebar">
+		<div id="homepage_sidebar"><a href="#homepage">Homepage</a></div>
+		<div id="graphics_sidebar"><a href="#graphics">Graphics</a></div>
+		<div id="web_sidebar_2"><a href="#web">Web/Interactive</a></div>
+		<div id="others_sidebar"><a href="#others">Others</a></div>
+		</span>
+
+		<div class='animation'>
+			<span id="overlay_animation"></span>
+			<video src="TheMan.mp4" id="animation"></video>
+		</div>
+		<span class="smalltext" id="animationText">An one minute animation depicts a mystery journey of a man</br> going up an elevator.</span>
+
+		<div class='CellBook'>
+			<span id="overlay_CellBook"></span>
+			<img src="CellBook.png" id="CellBook"></img>
+		</div>
+		<span class="smalltext" id="CellBookText">A study of human cells made into a book.</span>
+
+		<div class='illustration'>
+			<span id="overlay_illustration"></span>
+			<img src="illustration.jpg" id="illustration"></img>
+		</div>
+		<span class="smalltext" id="illustrationText">A series of humorous illustrated gifs.</span>
+
+		<div class='forever'>
+			<span id="overlay_forever"></span>
+			<img src="forever.png" id="forever"></img>
+		</div>
+		<span class="smalltext" id="foreverText">An idea of memory bank presenting through a series of</br> work that are hand painted and stored in a 3d environment.</span>
+
+		<div class='plaster'>
+			<span id="overlay_plaster"></span>
+			<img src="plaster.png" id="plaster"></img>
+		</div>
+		<span class="smalltext" id="plasterText">Inner explotion</span>
+	</div>
+
+	<div id="others">
+		<div id="subtitle">Others</div>
+		<span class="sidebar">
+		<div id="homepage_sidebar"><a href="#homepage">Homepage</a></div>
+		<div id="graphics_sidebar"><a href="#graphics">Graphics</a></div>
+		<div id="web_sidebar_2"><a href="#web">Web/Interactive</a></div>
+		<div id="arts_sidebar_2"><a href="#arts">Arts</a></div>
+		</span>
+	</div>
+</body>
+<script>
+
+var counter = 0;
+
+$("html").click(function(){
+var flower = $("<img src='jasmine2.png' class='jasminePhoto'>").css({"left": event.pageX + 'px',"top": event.pageY + 'px'
+});
+if(counter == 0){
+$("body").append(flower);
+} if (counter == 1){
+$("body").append(flower.css('width', '15vw'));
+$("body").append(flower.css('opacity', '0.7'));
+} if (counter == 2) {
+$("body").append(flower.css('width', '10vw'));
+$("body").append(flower.css('opacity', '0.3'));
+} if( counter == 3){
+$("body").append(flower.css('width', '8vw'));
+} if( counter == 4){
+$("body").append(flower.css('width', '6vw'));
+$("body").append(flower.css('opacity', '0.4'));
+} if( counter == 5){
+$("body").append(flower.css('width', '13vw'));
+$("body").append(flower.css('opacity', '0.8'));
+}
+if( counter == 6){
+counter=0;
+}
+counter++;
+});
+
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+
+	$("#overlay_dialogue").mouseover(function() {
+  	$("#dialogue")[0].play();
+	});
+
+	$("#overlay_dialogue").mouseout(function() {
+  	$("#dialogue")[0].pause();
+	});
+
+	$("#collcetion").mouseover(function() {
+		console.log('ready')
+  	$("#collcetion")[0].play();
+	});
+
+	$("#overlay_collcetion").mouseout(function() {
+  	$("#collcetion")[0].pause();
+	});
+
+	$("#SOB").mouseover(function() {
+  	$("#SOB")[0].play();
+	});
+
+	$("#SOB").mouseout(function() {
+  	$("#SOB")[0].pause();
+	});
+
+	$("#overlay_cdlecture").mouseover(function() {
+  	$("#cdlecture")[0].play();
+	});
+
+	$("#cdlecture").mouseout(function() {
+  	$("#cdlecture")[0].pause();
+	});
+
+	$("#animation").click(function() {
+  	$("#animation")[0].play();
+	});
+ 
+</script>
+</html>
