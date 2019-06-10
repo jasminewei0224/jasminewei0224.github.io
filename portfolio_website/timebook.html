@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grpahics- Because of love</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style type="text/css">
+  	html{
+	padding: 0;
+	margin: 0;
+	color: #8C9389;
+	font-family: avenir;
+	overflow-x: hidden;
+}
+
+.title{
+	font-family: avenir;
+	font-weight: bold;
+	font-size: 80px;
+	position: absolute;
+	top: 3vh;
+	left: 3vw;
+}
+
+#arrowright{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	left: 95vw;
+}
+
+#arrowleft{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	right: 96vw;
+}
+
+.main{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.smalltext{
+	font-size: 15px;
+}
+
+#sub{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 100vh;
+}
+
+#text{
+	position: absolute;
+	top: 69vh;
+	left: 5vw;
+}
+
+a{
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#text2{
+	position: absolute;
+	top: 73vh;
+	left: 5vw;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#homepage_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 20vh;
+	left: -0.6vw;
+}
+
+#homepage_sidebar:hover{
+	opacity: 0.6;
+}
+
+#mainpic{
+	position: absolute;
+	width: 25vw;
+	top: 20vh;
+	left: 5vw;
+}
+
+#pic2{
+	position: absolute;
+	width: 25vw;
+	top: 20vh;
+	left: 35vw;
+}
+
+#pic4{
+	position: absolute;
+	width: 25vw;
+	top: 20vh;
+	left: 63vw;
+}
+
+.content{
+	position: absolute;
+	top: 5vh;
+	left: 15vw;
+	width: 70vw;
+}
+</style>
+</head>
+<body>
+<div class="main">
+	<span class="title">Because of love</span>
+	<p class="smalltext" id="text">A metaphorical illustration book that conveys a simple message communication is the key to a successful relationship.</p>
+	<p id="text2"><a href="#sub">View complete collection design here.</a></p>
+	<div id="homepage_sidebar"><a href="portfolio.html">Homepage</a></div>
+	<a href="typohand.html"><img src="arrow-right.png" id="arrowright"></a>
+	<a href="MidnightDiner.html"><img src="arrow-left.png" id="arrowleft"></a>
+	<img src="timebook1.JPG" id="mainpic">
+	<img src="timebook2.JPG" id="pic2">
+	<img src="timebook4.JPG" id="pic4">
+	<div id="sub">
+		<img src="timebook_layout.jpg" class="content">
+	</div>
+</body>
+<script type="text/javascript">
+	$('a[href*="#"]')
+
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+     
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+      
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // 
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+</script>
+</html>

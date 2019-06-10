@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grpahics- My Typo Dic</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<style type="text/css">
+html{
+	padding: 0;
+	margin: 0;
+	color: #8C9389;
+	font-family: avenir;
+	overflow-x: hidden;
+}
+
+.title{
+	font-family: avenir;
+	font-weight: bold;
+	font-size: 80px;
+	position: absolute;
+	top: 3vh;
+	left: 3vw;
+}
+
+#arrowright{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	left: 95vw;
+}
+
+#mainpic{
+	position: absolute;
+	width: 25vw;
+	top: 20vh;
+	left: 5vw;
+}
+
+#pic2{
+	position: absolute;
+	height: 25vw;
+	top: 20vh;
+	left: 40vw;
+}
+
+.main{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+#sub{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 100vh;
+}
+
+.content{
+	position: absolute;
+	top: 5vh;
+	left: 8vw;
+	width: 80vw;
+}
+
+.smalltext{
+	font-size: 15px;
+}
+
+#text{
+	position: absolute;
+	top: 70vh;
+	left: 5vw;
+}
+
+#text2{
+	position: absolute;
+	top: 73vh;
+	left: 5vw;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a{	
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+#homepage_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 20vh;
+	left: -0.6vw;
+}
+
+#homepage_sidebar:hover{
+	opacity: 0.6;
+}
+</style>
+</head>
+<body>
+	<div class="main">
+		<img src="myTypoDic.jpg" id="mainpic">
+		<img src="Typography Dictionary_3.jpg" id="pic2">
+		<span class="title">My Typo Dic</span>
+		<div id="homepage_sidebar"><a href="portfolio.html">Homepage</a></div>
+		<p class="smalltext" id="text">A set of cards that are designed to help people
+		learn about typography related vocbularies.</p>
+		
+		<p id="text2"><a href="#sub">View complete collection design here.</a></p>
+		
+		<a href="MidnightDiner.html"><img src="arrow-right.png" id="arrowright"></a>
+	</div>
+
+	<div id="sub">
+		<img src="myTypoDic_sub.jpg" class="content">
+	</div>
+</body>
+<script type="text/javascript">
+	$('a[href*="#"]')
+
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+     
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+      
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // 
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+</script>
+</html>

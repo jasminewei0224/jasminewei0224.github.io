@@ -18,6 +18,10 @@ html{
 html ::selection{
 	background: black;
 }
+
+body:visited{
+	color: black;
+}
 body{
 	background-color: #8C9389;
 }
@@ -30,7 +34,6 @@ body{
 	position: absolute;
 	top: 3vh;
 	left: 3vw;
-/*z-index: 100;*/
 }
 
 .jasminePhoto{
@@ -62,6 +65,7 @@ ul li:hover{
 a{
 	text-decoration: none;
 	color: white;
+	cursor: pointer;
 }
 
 a:visited{
@@ -242,7 +246,7 @@ left: 90vw;*/
 #myTypoDicText{
 	position: absolute;
 	left: 15vw;
-	top: 47vh;
+	top: 46vh;
 	line-height: 1.5;
 }
 
@@ -267,7 +271,7 @@ left: 90vw;*/
 
 #overlay2{
 	width: 13vw;
-	height: 35vh;
+	height: 40vh;
 	position: absolute;
 	top: 0vh;
 	background-color: #8c9389;
@@ -300,7 +304,7 @@ left: 90vw;*/
 	height: 18vh;
 	position: absolute;
 	left: 15vw;
-	top: 52vh;
+	top: 53.7vh;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -353,7 +357,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 35vw;
-	top: 88vh;
+	top: 90vh;
 }
 
 #overlay5{
@@ -392,7 +396,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 53vw;
-	top: 44vh;
+	top: 46vh;
 }
 
 #overlay6{
@@ -431,7 +435,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 65vw;
-	top: 88vh;
+	top: 90vh;
 }
 
 #overlay7{
@@ -470,7 +474,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 73vw;
-	top: 44vh;
+	top: 46vh;
 }
 
 #overlay8{
@@ -509,7 +513,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 15vw;
-	top: 95vh;
+	top: 96vh;
 }
 
 #overlay9{
@@ -530,7 +534,7 @@ left: 90vw;*/
 	width: 10vw;
 	position: absolute;
 	left: 83vw;
-	top: 69vh;
+	top: 70.5vh;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -562,8 +566,8 @@ left: 90vw;*/
 
 #overlay_dialogue{
 	position: absolute;
-	width: 25vw;
-	height: 25vh;
+	width: 22.5vw;
+	height: 24vh;
 	top: 0;
 	background-color: #8c9389;
 	opacity: 0.5;
@@ -586,7 +590,7 @@ left: 90vw;*/
 }
 
 #dialogue{
-	width: 25vw;
+	width: 22.5vw;
 }
 
 #dialogueText{
@@ -597,9 +601,9 @@ left: 90vw;*/
 
 #overlay_collection{
 	position: absolute;
-	width: 25vw;
-	height: 27vh;
-	left: 45vw;
+	width: 20.5vw;
+	height: 23.5vh;
+	left: 1vw;
 	top: 0;
 	background-color: #8c9389;
 	opacity: 0.5;
@@ -613,7 +617,7 @@ left: 90vw;*/
 .collection{
 	position: absolute;
 	top: 15vh;
-	left: 45vw;
+	left: 42vw;
 	filter: grayscale(100%);
 }
 
@@ -622,23 +626,25 @@ left: 90vw;*/
 }
 
 #collection{
-	width: 25vw;
+	overflow: inherit;
+	width: 23vw;
+	height: 23.5vh;
 }
 
 #collectionText{
 	position: absolute;
-	left: 45vw;
-	top: 42vh;
+	left: 43.5vw;
+	top: 39.5vh;
 }
 
 #overlay_SOB{
 	position: absolute;
-	width: 15vw;
-	height: 27vh;
-	left: 75vw;
+	width: 13vw;
+	height: 45vh;
+	left: 0vw;
 	top: 0;
 	background-color: #8c9389;
-	opacity: 0.6;
+	opacity: 0.5;
 	z-index: 1;
 }
 
@@ -649,7 +655,7 @@ left: 90vw;*/
 .SOB{
 	position: absolute;
 	top: 15vh;
-	left: 75vw;
+	left: 71vw;
 	filter: grayscale(100%);
 }
 
@@ -658,19 +664,19 @@ left: 90vw;*/
 }
 
 #SOB{
-	width: 15vw;
+	width: 13vw;
 }
 
 #SOBText{
 	position: absolute;
-	left: 75vw;
-	top: 62vh;
+	left: 71vw;
+	top: 60vh;
 }
 
 #overlay_cdlecture{
 	position: absolute;
-	width: 25vw;
-	height: 25vh;
+	width: 22.5vw;
+	height: 22.7vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -692,18 +698,19 @@ left: 90vw;*/
 }
 
 #cdlecture{
-	width: 25vw;
+	width: 22.5vw;
 }
 
 #cdlectureText{
 	position: absolute;
 	left: 15vw;
-	top: 73vh;
+	top: 73.5vh;
 }
 
 #overlay_pie{
 	position: absolute;
-	width: 25vw;
+	width: 21vw;
+	left: 0.7vw;
 	height: 25vh;
 	background-color: #8c9389;
 	opacity: 0.5;
@@ -717,7 +724,7 @@ left: 90vw;*/
 .pie{
 	position: absolute;
 	top: 50vh;
-	left: 45vw;
+	left: 42.5vw;
 	filter: grayscale(100%);
 }
 
@@ -726,13 +733,89 @@ left: 90vw;*/
 }
 
 #pie{
-	width: 25vw;
+	overflow: inherit;
+	width: 22.5vw;
+	height: 22.7vh;
 }
 
 #pieText{
 	position: absolute;
-	left: 45vw;
-	top: 75vh;
+	left: 43vw;
+	top: 73.5vh;
+}
+
+#overlay_studio{
+	position: absolute;
+	width: 22.5vw;
+	left: 0vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_studio:hover{
+	opacity: 0;
+}
+
+.studio{
+	position: absolute;
+	top: 80vh;
+	left: 15vw;
+	filter: grayscale(100%);
+}
+
+.studio:hover{
+	filter: grayscale(0);
+}
+
+#studio{
+	overflow: inherit;
+	width: 22.5vw;
+	height: 22.7vh;
+}
+
+#studioText{
+	position: absolute;
+	left: 15vw;
+	top: 85vh;
+}
+
+#overlay_yt{
+	position: absolute;
+	width: 22.5vw;
+	left: 0vw;
+	height: 25vh;
+	background-color: #8c9389;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#overlay_yt:hover{
+	opacity: 0;
+}
+
+.yt{
+	position: absolute;
+	top: 80vh;
+	left: 43vw;
+	filter: grayscale(100%);
+}
+
+.yt:hover{
+	filter: grayscale(0);
+}
+
+#yt{
+	overflow: inherit;
+	width: 22.5vw;
+	height: 22.7vh;
+}
+
+#ytText{
+	position: absolute;
+	left: 15vw;
+	top: 85vh;
 }
 
 #arts{
@@ -762,7 +845,7 @@ left: 90vw;*/
 #overlay_animation{
 	position: absolute;
 	width: 25vw;
-	height: 25vh;
+	height: 26.8vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -775,7 +858,7 @@ left: 90vw;*/
 #animationText{
 	position: absolute;
 	left: 15vw;
-	top: 42vh;
+	top: 44.5vh;
 }
 
 .CellBook{
@@ -792,7 +875,7 @@ left: 90vw;*/
 #overlay_CellBook{
 	position: absolute;
 	width: 14.5vw;
-	height: 25vh;
+	height: 27vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -803,14 +886,14 @@ left: 90vw;*/
 }
 
 #CellBook{
-	width: 14.5vw;
+	width: 14.7vw;
 	z-index: 0;
 }
 
 #CellBookText{
 	position: absolute;
 	left: 45vw;
-	top: 42vh;
+	top: 44.5vh;
 }
 
 .illustration{
@@ -845,13 +928,13 @@ left: 90vw;*/
 #illustrationText{
 	position: absolute;
 	left: 64vw;
-	top: 42vh;
-	}
+	top: 44.5vh;
+}
 
 #overlay_forever{
 	position: absolute;
 	width: 21vw;
-	height: 25vh;
+	height: 27vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -868,7 +951,7 @@ left: 90vw;*/
 
 .forever{
 	position: absolute;
-	top: 50vh;
+	top: 53vh;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -880,13 +963,13 @@ left: 90vw;*/
 #foreverText{
 	position: absolute;
 	left: 15vw;
-	top: 75vh;
+	top: 80.5vh;
 	}
 
 #overlay_plaster{
 	position: absolute;
 	width: 21vw;
-	height: 25vh;
+	height: 27vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -903,8 +986,8 @@ left: 90vw;*/
 
 .plaster{
 	position: absolute;
-	top: 50vh;
-	left: 42vw;
+	top: 53vh;
+	left: 45vw;
 	filter: grayscale(100%);
 }
 
@@ -914,8 +997,8 @@ left: 90vw;*/
 
 #plasterText{
 	position: absolute;
-	left: 42vw;
-	top: 75vh;
+	left: 45vw;
+	top: 80.5vh;
 	}
 
 #others{
@@ -959,11 +1042,12 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		
 	</span>
 	<a href="#web"><img src="arrow.png" id="arrow"></a>
+	<a href="myTypoDic.html">
 	<div class="myTypoDic">
 		<div id="overlay1"></div>
 		<img src="myTypoDic.jpg" id="myTypoDic" >
-	</div>
-	<span class="smalltext" id="myTypoDicText">A set of cards that are designed to help </br>people learn about typography related </br>vocbulary terms.</span>
+	</div></a>
+	<span class="smalltext" id="myTypoDicText">A set of cards that are designed to help people</br> learn about typography related vocbularies.</span>
 
 	<div class="midnightDiner">
 		<div id="overlay2"></div>
@@ -981,37 +1065,37 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<div id="overlay4"></div>
 		<img src="single_to_multiple final_Page_1.jpg" id="sTom">
 	</div>
-	<span class="smalltext" id="sTomText">A series of found object with images gathered, I created the homeless.</br> These collages were designed with 6 short poems and put into a book.</span>
+	<span class="smalltext" id="sTomText">A series of found object with images gathered, I created the homeless. These </br>collages were designed with 6 short poems and put into a book.</span>
 
 	<div class="futura">
 		<div id="overlay5"></div>
 		<img src="futura_booklet_Page_01.jpg" id="futura">
 	</div>
-	<span class="smalltext" id="futuraText">An information booklet about a font - Futura.</span>
+	<span class="smalltext" id="futuraText">An information booklet about the font - Futura.</span>
 
 	<div class="festival">
 		<div id="overlay6"></div>
 		<img src="coffee_festival_poster.png" id="festival">
 	</div>
-	<span class="smalltext" id="festivalText">Set of posters designed for </br>The Coffee Festival.</span>
+	<span class="smalltext" id="festivalText">Posters designed for The Coffee Festival.</span>
 
 	<div class="timebook">
 		<div id="overlay7"></div>
 		<img src="time_book.png" id="timebook">
 	</div>
-	<span class="smalltext" id="timebookText">A metaphorical illustration book</br> that communicates a simple message - </br>communication is the key to relationships.</span>
+	<span class="smalltext" id="timebookText">A metaphorical illustration book that conveys</br> a simple message - communication is the key to</br> a successful relationship.</span>
 
 	<div class="ohMyNyc">
 		<div id="overlay8"></div>
 		<img src="Oh_My_NYC.png" id="ohMyNyc">
 	</div>
-	<span class="smalltext" id="ohMyNycText">A book about my top 5 places in New York.</span>
+	<span class="smalltext" id="ohMyNycText">A book about my top 5 locations</br> in New York.</span>
 
 	<div class="postcards">
 		<div id="overlay9"></div>
 		<img src="postcards_cover.png" id="postcards">
 	</div>
-	<span class="smalltext" id="postcardsText">A book about my top 5 places in New York.</span>
+	<span class="smalltext" id="postcardsText"></span>
 </div>
 
 <div id="web">
@@ -1029,7 +1113,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<video src="TheBrandNewTestament.mp4" id="dialogue"></video>
 		</a>
 	</div>
-	<span class="smalltext" id="dialogueText"> A dialogue focus on a movie - The Brand New Testament,</br> that is between God and God's daughter.  </span>
+	<span class="smalltext" id="dialogueText"> A dialogue focus on a movie - The Brand New Testament, that is between</br> God and God's daughter.  </span>
 
 	<div class="collection">
 		<a href="https://jasminewei0224.github.io/collection.html" target="blank">
@@ -1037,7 +1121,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<video src="collection.mp4" type="mp4" id="collection"></video>
 		</a>
 	</div>
-	<span class="smalltext" id="collectionText"> A digital playground that incorporate interaction, sound, and movement.</br> </span>
+	<span class="smalltext" id="collectionText"> A digital playground that incorporate interaction, sound, and</br> movement to create a brand new experiment of a playground. </span>
 
 	<div class="SOB">
 		<a href="https://jasminewei0224.github.io/studio/Shades%20of%20Blue/" target="blank">
@@ -1045,7 +1129,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<video src="shadesofblue.mp4" id="SOB"></video>
 		</a>
 	</div>
-	<span class="smalltext" id="SOBText"> A meditating phone website </br>based on my trip to Greece.</br> </span>
+	<span class="smalltext" id="SOBText"> A meditating phone only website based</br> on my trip to Greece.</br> </span>
 	
 	<div class="cdlecture">
 		<a href="https://jasminewei0224.github.io/studio/cd%20lecture/cdlecture.html" target="blank">
@@ -1063,6 +1147,20 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 	</div>
 	<span class="smalltext" id="pieText">A clock that moves every hour that got inspiration from a missing pie.</span>
 
+	<div class="studio">
+		<a href="https://jasminewei0224.github.io/lab/homepage.html" target="blank">
+		<div id="overlay_studio"></div>
+		<video src="homepage.mp4" id="studio"></video>
+		</a>
+	</div>
+
+	<div class="yt">
+		<a href="https://jasminewei0224.github.io/yt/MAMMONISM.html" target="blank">
+		<div id="overlay_yt"></div>
+		<video src="yt.mp4" id="yt"></video>
+		</a>
+	</div>
+	
 	</div>
 
 	<div id="arts">
@@ -1078,7 +1176,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 			<span id="overlay_animation"></span>
 			<video src="TheMan.mp4" id="animation"></video>
 		</div>
-		<span class="smalltext" id="animationText">An one minute animation depicts a mystery journey of a man</br> going up an elevator.</span>
+		<span class="smalltext" id="animationText">An 1 minute animation depicts a mystery journey of a man going up an elevator.</span>
 
 		<div class='CellBook'>
 			<span id="overlay_CellBook"></span>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<title>Grpahics-Midnight Diner</title>
+<style type="text/css">
+html{
+	padding: 0;
+	margin: 0;
+	color: #8C9389;
+	font-family: avenir;
+	overflow-x: hidden;
+}
+
+.title{
+	font-family: avenir;
+	font-weight: bold;
+	font-size: 80px;
+	position: absolute;
+	top: 3vh;
+	left: 3vw;
+}
+
+#arrowright{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	left: 95vw;
+}
+
+#arrowleft{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	right: 96vw;
+}
+
+.main{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.smalltext{
+	font-size: 15px;
+}
+
+#sub{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 100vh;
+}
+
+#text{
+	position: absolute;
+	top: 70vh;
+	left: 5vw;
+}
+
+a{
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#text2{
+	position: absolute;
+	top: 73vh;
+	left: 5vw;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#homepage_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 20vh;
+	left: -0.6vw;
+}
+
+#homepage_sidebar:hover{
+	opacity: 0.6;
+}
+
+#mainpic{
+	position: absolute;
+	width: 60vw;
+	top: 20vh;
+	left: 5vw;
+}
+
+#pic2{
+	position: absolute;
+	width: 26.2vw;
+	top: 20vh;
+	left: 68vw;
+}
+
+#button1{
+	position: absolute;
+	width: 4vw;
+	top:37vh;
+	left: 18vw;
+	opacity: 0.6;
+	z-index: 100;
+}
+
+#video1{
+	position: absolute;
+	width: 30vw;
+	top:30vh;
+	left: 5vw;
+}
+
+#button2{
+	position: absolute;
+	width: 4vw;
+	top:37vh;
+	left: 48vw;
+	opacity: 0.6;
+	z-index: 100;
+}
+
+#video2{
+	position: absolute;
+	width: 30vw;
+	top:30vh;
+	left: 35vw;
+}
+
+#button3{
+	position: absolute;
+	width: 4vw;
+	top:37vh;
+	left: 77.5vw;
+	opacity: 0.6;
+	z-index: 100;
+}
+
+#video3{
+	position: absolute;
+	width: 30vw;
+	top:30vh;
+	left: 65vw;
+}
+</style>
+</head>
+<body>
+<div class="main">
+	<span class="title">Midnight Diner book series</span>
+	<img src="all2.jpg" id="mainpic">
+	<img src="night.jpg" id="pic2">
+	<p class="smalltext" id="text">
+	A series of books that are designed based
+	on the manuscript of a Japanese drama - Midnight Diner.</p>
+	<div id="homepage_sidebar"><a href="portfolio.html">Homepage</a></div>
+	<p id="text2"><a href="#sub">View complete collection design here.</a></p>
+	<a href="futura.html"><img src="arrow-right.png" id="arrowright"></a>
+	<a href="myTypoDic.html"><img src="arrow-left.png" id="arrowleft"></a>
+
+	<div id="sub">
+		<img src="play-button.png" id="button1">
+		<video src="hotdog.mp4" id="video1"></video>
+		<img src="play-button.png" id="button2">
+		<video src="tofu_rice.mp4" id="video2"></video>
+		<img src="play-button.png" id="button3">
+		<video src="omelette_rice.mp4" id="video3"></video>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+
+$("#button1").click(function(){
+	$("#video1")[0].play()
+	$("#button1").hide()
+});
+
+$("#button2").click(function(){
+	$("#video2")[0].play()
+	$("#button2").hide()
+});
+
+$("#button3").click(function(){
+	$("#video3")[0].play()
+	$("#button3").hide()
+});
+	$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
+</html>
