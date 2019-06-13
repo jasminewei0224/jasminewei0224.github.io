@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arts- Scultpure</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style type="text/css">
+  html{
+	padding: 0;
+	margin: 0;
+	color: #8C9389;
+	font-family: avenir;
+	overflow-x: hidden;
+}
+
+.title{
+	font-family: avenir;
+	font-weight: bold;
+	font-size: 5vw;
+	position: absolute;
+	top: 1.5vw;
+	left: 3vw;
+}
+
+#arrowright{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	left: 95vw;
+}
+
+#arrowleft{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	right: 96vw;
+}
+
+.main{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.smalltext{
+	font-size: 15px;
+}
+
+#sub{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 100vh;
+}
+
+#text{
+	position: absolute;
+	top: 38vw;
+	left: 5vw;
+}
+
+
+a{
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#text2{
+	position: absolute;
+	top: 42vw;
+	left: 5vw;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 100;
+}
+
+#homepage_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 12vw;
+	left: -0.6vw;
+}
+
+#homepage_sidebar:hover{
+	opacity: 0.6;
+}
+
+#mainpic{
+	position: absolute;
+	height: 27vw;
+	top: 11vw;
+	left: 5vw;
+}
+
+#content{
+	position: absolute;
+	top: 5vw;
+	left: 7vw;
+	height: 45vw;
+}
+
+</style>
+</head>
+<body>
+<div class="main">
+	<span class="title">Deadly disasters</span>
+	<p class="smalltext" id="text">
+	A man after some deadly disaster.</br>
+	Acrylic paint on clear sheets, with carved plaster and metal.
+	</p>
+	<p id="text2"><a href="#sub">View the details here.</a></p>
+	<div id="homepage_sidebar"><a href="portfolio.html">Homepage</a></div>
+	<img src="arrow-right.png" id="arrowright">
+	<a href="gifs.html"><img src="arrow-left.png" id="arrowleft"></a>
+	<img src="plaster.png" id="mainpic">
+	<div id="sub">
+		<img src="plaster2.png" id="content">
+		
+		
+	</div>
+	</body>
+<script type="text/javascript">
+
+	$("#button1").click(function(){
+	$("#content")[0].play()
+	$("#button1").hide()
+	});
+
+	$("#content").click(function(){
+		$("#content")[0].pause()
+		$("#button1").show()
+	});
+
+$('a[href*="#"]')
+
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+     
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+      
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // 
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+  </script>
+</html>

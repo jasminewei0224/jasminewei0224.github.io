@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grpahics- Postcards</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<style type="text/css">
+  html{
+	padding: 0;
+	margin: 0;
+	color: #8C9389;
+	font-family: avenir;
+	overflow-x: hidden;
+}
+
+.title{
+	font-family: avenir;
+	font-weight: bold;
+	font-size: 5vw;
+	position: absolute;
+	top: 1.5vw;
+	left: 3vw;
+}
+
+#arrowright{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	left: 95vw;
+}
+
+#arrowleft{
+	position: absolute;
+	width: 3vw;
+	top: 95vh;
+	right: 96vw;
+}
+
+.main{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.smalltext{
+	font-size: 15px;
+}
+
+#sub{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 100vh;
+}
+
+#text{
+	position: absolute;
+	top: 38vw;
+	left: 5vw;
+}
+
+
+a{
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#text2{
+	position: absolute;
+	top: 41vw;
+	left: 5vw;
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 100;
+}
+
+#homepage_sidebar{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 12vw;
+	left: -0.6vw;
+}
+
+#homepage_sidebar:hover{
+	opacity: 0.6;
+}
+
+#mainpic{
+	position: absolute;
+	height: 26vw;
+	top: 11vw;
+	left: 5vw;
+}
+
+#content{
+	position: absolute;
+	top: 10vw;
+	left: 5vw;
+	height: 30vw;
+}
+
+#pic2{
+	position: absolute;
+	top: 10vw;
+	left: 28vw;
+	height: 30vw;
+}
+
+#pic3{
+	position: absolute;
+	top: 10vw;
+	left: 51vw;
+	height: 30vw;
+}
+
+#pic4{
+	position: absolute;
+	top: 10vw;
+	left: 74vw;
+	height: 30vw;
+}
+</style>
+</head>
+<body>
+<div class="main">
+	<span class="title">#Dollystagram Postcards</span>
+	<p class="smalltext" id="text">
+		A set of postcards designed for a friend that has a great sense of fashion, footwear is what takes her around the world.</br> The postcards could be used all around the world as she goes on her journey.
+	</p>
+	<p id="text2"><a href="#sub">View complete collection design here.</a></p>
+	<div id="homepage_sidebar"><a href="portfolio.html">Homepage</a></div>
+	<a href="ohMyNyc.html"><img src="arrow-right.png" id="arrowright"></a>
+	<a href="festivalposter.html"><img src="arrow-left.png" id="arrowleft"></a>
+	<img src="postcards_cover.png" id="mainpic">
+	<div id="sub">
+		<img src="postcard2.png" id="content">
+		<img src="postcard1.png" id="pic2">
+		<img src="postcard3.png" id="pic3">
+		<img src="postcard4.png" id="pic4">
+	</div>
+	</body>
+<script type="text/javascript">
+$('a[href*="#"]')
+
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+     
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+      
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // 
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+  </script>
+</html>

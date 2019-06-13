@@ -19,9 +19,9 @@
 .title{
 	font-family: avenir;
 	font-weight: bold;
-	font-size: 80px;
+	font-size: 5vw;
 	position: absolute;
-	top: 3vh;
+	top: 1.5vw;
 	left: 3vw;
 }
 
@@ -58,7 +58,7 @@
 
 #text{
 	position: absolute;
-	top: 69vh;
+	top: 38vw;
 	left: 5vw;
 }
 
@@ -71,7 +71,7 @@ a{
 
 #text2{
 	position: absolute;
-	top: 73vh;
+	top: 53vw;
 	left: 5vw;
 	text-decoration: none;
 	cursor: pointer;
@@ -80,7 +80,7 @@ a{
 #homepage_sidebar{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 20vh;
+	top: 12vw;
 	left: -0.6vw;
 }
 
@@ -90,30 +90,31 @@ a{
 
 #mainpic{
 	position: absolute;
-	height: 48vh;
-	top: 20vh;
+	height: 25vw;
+	top: 11vw;
 	left: 5vw;
 }
 
-#content{
-	position: absolute;
-	top: 20vh;
-	left: 5vw;
-	width: 90vw;
-}
 
 #pic2{
 	position: absolute;
-	height: 48vh;
-	top: 20vh;
+	height: 25vw;
+	top: 11vw;
 	left: 30vw;
 }
 
 #pic3{
 	position: absolute;
-	height: 48vh;
-	top: 20vh;
+	height: 25vw;
+	top: 11vw;
 	left: 54vw;
+}
+
+#content{
+	position: absolute;
+	top: 10vw;
+	left: 5vw;
+	height: 30vw;
 }
 </style>
 </head>
@@ -125,14 +126,12 @@ a{
 	</p>
 	<!-- <p id="text2"><a href="#sub">View complete collection design here.</a></p> -->
 	<div id="homepage_sidebar"><a href="portfolio.html">Homepage</a></div>
-	<img src="arrow-right.png" id="arrowright">
+	<a href="postcard.html"><img src="arrow-right.png" id="arrowright"></a>
 	<a href="collagebook.html"><img src="arrow-left.png" id="arrowleft"></a>
 	<img src="coffee_festival_poster.png" id="mainpic">
 	<img src="brewbar_1.png" id="pic2">
 	<img src="coffe_lab_2.png" id="pic3">
-	<div id="sub">
-		<img src="collagebook.jpg" id="content">
-	</div>
+	
 </body>
 <script type="text/javascript">
 $('a[href*="#"]')

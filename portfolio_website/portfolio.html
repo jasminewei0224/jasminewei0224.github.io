@@ -551,8 +551,8 @@ left: 90vw;*/
 #postcardsText{
 	line-height: 1.5;
 	position: absolute;
-	left: 15vw;
-	top: 95vh;
+	left: 83vw;
+	top: 90vh;
 }
 
 #web{
@@ -688,7 +688,7 @@ left: 90vw;*/
 
 .cdlecture{
 	position: absolute;
-	top: 50vh;
+	top: 47vh;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -704,7 +704,7 @@ left: 90vw;*/
 #cdlectureText{
 	position: absolute;
 	left: 15vw;
-	top: 73.5vh;
+	top: 70.5vh;
 }
 
 #overlay_pie{
@@ -723,7 +723,7 @@ left: 90vw;*/
 
 .pie{
 	position: absolute;
-	top: 50vh;
+	top: 47vh;
 	left: 42.5vw;
 	filter: grayscale(100%);
 }
@@ -741,14 +741,14 @@ left: 90vw;*/
 #pieText{
 	position: absolute;
 	left: 43vw;
-	top: 73.5vh;
+	top: 70.5vh;
 }
 
 #overlay_studio{
 	position: absolute;
 	width: 22.5vw;
 	left: 0vw;
-	height: 25vh;
+	height: 23vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -760,7 +760,7 @@ left: 90vw;*/
 
 .studio{
 	position: absolute;
-	top: 80vh;
+	top: 75vh;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -778,14 +778,14 @@ left: 90vw;*/
 #studioText{
 	position: absolute;
 	left: 15vw;
-	top: 85vh;
+	top: 98vh;
 }
 
 #overlay_yt{
 	position: absolute;
 	width: 22.5vw;
 	left: 0vw;
-	height: 25vh;
+	height: 23vh;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -797,7 +797,7 @@ left: 90vw;*/
 
 .yt{
 	position: absolute;
-	top: 80vh;
+	top: 75vh;
 	left: 43vw;
 	filter: grayscale(100%);
 }
@@ -814,8 +814,8 @@ left: 90vw;*/
 
 #ytText{
 	position: absolute;
-	left: 15vw;
-	top: 85vh;
+	left: 43vw;
+	top: 98vh;
 }
 
 #arts{
@@ -1009,6 +1009,50 @@ left: 90vw;*/
 	width: 100vw;
 	height: 100vh;
 }
+
+#overlay_photography{
+	width: 15vw;
+	height: 20vw;
+	position: absolute;
+	top: 0vh;
+	background-color: #8c9389;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+.photography{
+	width: 15vw;
+	position: absolute;
+	left: 15vw;
+	top: 17vh;
+	z-index: 0;
+	filter: grayscale(100%);
+}
+
+.photography:hover{
+	filter: grayscale(0);
+}
+
+#photography{
+	width: 15vw;
+	position: absolute;
+}
+
+#overlay_photography:hover{
+	opacity: 0;
+}
+
+.smalltext{
+	font-size: 12px;
+}
+
+#photographyText{
+	position: absolute;
+	left: 15vw;
+	top: 52.5vh;
+	line-height: 1.5;
+}
+
 </style>
 </head>
 <body>
@@ -1091,17 +1135,19 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 	</div></a>
 	<span class="smalltext" id="timebookText">A metaphorical illustration book that conveys</br> a simple message - communication is the key to</br> a successful relationship.</span>
 
+	<a href="ohMyNyc.html">
 	<div class="ohMyNyc">
 		<div id="overlay8"></div>
 		<img src="Oh_My_NYC.png" id="ohMyNyc">
-	</div>
+	</div></a>
 	<span class="smalltext" id="ohMyNycText">A book about my top 5 locations</br> in New York.</span>
 
+	<a href="postcard.html">
 	<div class="postcards">
 		<div id="overlay9"></div>
 		<img src="postcards_cover.png" id="postcards">
-	</div>
-	<span class="smalltext" id="postcardsText"></span>
+	</div></a>
+	<span class="smalltext" id="postcardsText">A set of postcards designed for a</br> fashionable friend.</span>
 </div>
 
 <div id="web">
@@ -1159,6 +1205,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<video src="homepage.mp4" id="studio"></video>
 		</a>
 	</div>
+	<span class="smalltext" id="studioText">A website designed for two classes portoflios.</span>
 
 	<div class="yt">
 		<a href="https://jasminewei0224.github.io/yt/MAMMONISM.html" target="blank">
@@ -1166,6 +1213,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<video src="yt.mp4" id="yt"></video>
 		</a>
 	</div>
+	<span class="smalltext" id="ytText">A lookbook designed for a friend's fashion collection - Mammonism.</span>
 	
 	</div>
 
@@ -1178,34 +1226,39 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<div id="others_sidebar"><a href="#others">Others</a></div>
 		</span>
 
+		<a href="theman.html">
 		<div class='animation'>
 			<span id="overlay_animation"></span>
 			<video src="TheMan.mp4" id="animation"></video>
-		</div>
+		</div></a>
 		<span class="smalltext" id="animationText">An 1 minute animation depicts a mystery journey of a man going up an elevator.</span>
 
+		<a href="cellbook.html">
 		<div class='CellBook'>
 			<span id="overlay_CellBook"></span>
 			<img src="CellBook.png" id="CellBook"></img>
-		</div>
+		</div></a>
 		<span class="smalltext" id="CellBookText">A study of human cells made into a book.</span>
 
+		<a href="gifs.html">
 		<div class='illustration'>
 			<span id="overlay_illustration"></span>
-			<img src="illustration.jpg" id="illustration"></img>
-		</div>
+			<img src="illustration.png" id="illustration"></img>
+		</div></a>
 		<span class="smalltext" id="illustrationText">A series of humorous illustrated gifs.</span>
 
+		<a href="memory.html">
 		<div class='forever'>
 			<span id="overlay_forever"></span>
 			<img src="forever.png" id="forever"></img>
-		</div>
-		<span class="smalltext" id="foreverText">An idea of memory bank presenting through a series of</br> work that are hand painted and stored in a 3d environment.</span>
+		</div></a>
+		<span class="smalltext" id="foreverText">An idea of memory bank presenting through a series of</br> work that are hand painted and stored in a container.</span>
 
+		<a href="plaster.html">
 		<div class='plaster'>
 			<span id="overlay_plaster"></span>
 			<img src="plaster.png" id="plaster"></img>
-		</div>
+		</div></a>
 		<span class="smalltext" id="plasterText">Inner explotion</span>
 	</div>
 
@@ -1217,6 +1270,12 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<div id="web_sidebar_2"><a href="#web">Web/Interactive</a></div>
 		<div id="arts_sidebar_2"><a href="#arts">Arts</a></div>
 		</span>
+
+		<a href="photography.html"><div class="photography">
+			<span id="overlay_photography"></span>
+			<img src="IMG_6057.JPG" id="photography"></img>
+		</div></a>
+		<span class="smalltext"id="photographyText">Some iPhone photography</span>
 	</div>
 </body>
 <script>
@@ -1294,7 +1353,7 @@ $('a[href*="#"]')
   	$("#dialogue")[0].pause();
 	});
 
-	$("#collcetion").mouseover(function() {
+	$("#overlay_collcetion").mouseover(function() {
 		console.log('ready')
   	$("#collcetion")[0].play();
 	});
@@ -1303,11 +1362,11 @@ $('a[href*="#"]')
   	$("#collcetion")[0].pause();
 	});
 
-	$("#SOB").mouseover(function() {
+	$("#overlay_SOB").mouseover(function() {
   	$("#SOB")[0].play();
 	});
 
-	$("#SOB").mouseout(function() {
+	$("#overlay_SOB").mouseout(function() {
   	$("#SOB")[0].pause();
 	});
 
@@ -1321,6 +1380,22 @@ $('a[href*="#"]')
 
 	$("#animation").click(function() {
   	$("#animation")[0].play();
+	});
+
+	$("#overlay_studio").mouseover(function() {
+  	$("#studio")[0].play();
+	});
+
+	$("#overlay_studio").mouseout(function() {
+  	$("#studio")[0].pause();
+	});
+
+	$("#overlay_yt").mouseover(function() {
+  	$("#yt")[0].play();
+	});
+
+	$("#overlay_yt").mouseout(function() {
+  	$("#yt")[0].pause();
 	});
  
 </script>
