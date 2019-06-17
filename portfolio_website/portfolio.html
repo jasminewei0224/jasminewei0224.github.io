@@ -19,11 +19,16 @@ html ::selection{
 	background: black;
 }
 
-body:visited{
+a:visited{
 	color: black;
 }
 body{
 	background-color: #8C9389;
+}
+
+#homepage{
+	width: 100%;
+	height:100%;
 }
 
 .title{
@@ -110,10 +115,10 @@ left: 90vw;*/
 #graphics{
 	position: absolute;
 	text-decoration: none;
-	top: 99.9vh;
+	top: 99.9%;
 	left: 0;
-	width: 150vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
@@ -137,8 +142,8 @@ left: 90vw;*/
 #web_sidebar{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 40vh;
-	left: -1.8vw;
+	top: 320px;
+	left: -25px;
 }
 
 #web_sidebar:hover{
@@ -148,8 +153,8 @@ left: 90vw;*/
 #graphics_sidebar{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 40vh;
-	left: 0vw;
+	top: 320px;
+
 }
 
 #web_sidebar:hover{
@@ -159,8 +164,8 @@ left: 90vw;*/
 #homepage_sidebar{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 20vh;
-	left: -0.6vw;
+	top: 160px;
+	left: -8px;
 }
 
 #homepage_sidebar:hover{
@@ -170,8 +175,8 @@ left: 90vw;*/
 #arts_sidebar{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 60vh;
-	left: 1vw;
+	top: 460px;
+	left: 15px;
 }
 
 #arts_sidebar:hover{
@@ -181,26 +186,37 @@ left: 90vw;*/
 #web_sidebar_2{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 60vh;
-	left:-1.8vw;
+	top: 500px;
+	left:-23px;
 }
 
 #others_sidebar{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 80vh;
-	left: 0.2vw;
+	top: 600px;
+	left: 6px;
 }
 
 #others_sidebar:hover{
 	opacity: 0.6;
 }
 
+#others_sidebar2 :hover{
+	opacity: 0.6;
+}
+
+#others_sidebar_2{
+	transform: rotate(270deg);
+	position: absolute;
+	top: 700px;
+	left: 6px;
+}
+
 #arts_sidebar_2{
 	transform: rotate(270deg);
 	position: absolute;
-	top: 80vh;
-	left: 1vw;
+	top: 680px;
+	left: 15px;
 }
 
 #arts_sidebar_2:hover{
@@ -211,7 +227,6 @@ left: 90vw;*/
 	width: 15vw;
 	height: 15.5vw;
 	position: absolute;
-	top: 0vh;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -221,7 +236,7 @@ left: 90vw;*/
 	width: 15vw;
 	position: absolute;
 	left: 15vw;
-	top: 17vh;
+	top: 8.8vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -240,13 +255,13 @@ left: 90vw;*/
 }
 
 .smalltext{
-	font-size: 12px;
+	font-size: 1vw;
 }
 
 #myTypoDicText{
 	position: absolute;
 	left: 15vw;
-	top: 46vh;
+	top: 24.5vw;
 	line-height: 1.5;
 }
 
@@ -254,7 +269,7 @@ left: 90vw;*/
 	width: 13vw;
 	position: absolute;
 	left: 35vw;
-	top: 17vh;
+	top: 8.8vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -271,9 +286,8 @@ left: 90vw;*/
 
 #overlay2{
 	width: 13vw;
-	height: 40vh;
+	height: 20vw;
 	position: absolute;
-	top: 0vh;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 100;
@@ -288,23 +302,23 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 35vw;
-	top: 55vh;
+	top: 29vw;
 }
 
 #typoByHand{
 	width: 18vw;
 	position: absolute;
 	left: 15vw;
-	top: 52vh;
+	top: 28vw;
 	z-index: 0;
 }
 
 #overlay3{
 	width: 18vw;
-	height: 18vh;
+	height: 10vw;
 	position: absolute;
 	left: 15vw;
-	top: 53.7vh;
+	top: 28.5vw;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -314,7 +328,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 15vw;
-	top: 72vh;
+	top: 39vw;
 }
 
 #overlay3:hover{
@@ -325,7 +339,6 @@ left: 90vw;*/
 	width: 25vw;
 	height: 13vw;
 	position: absolute;
-	top: 20%;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -339,7 +352,7 @@ left: 90vw;*/
 	width: 25vw;
 	position: absolute;
 	left: 35vw;
-	top: 65vh;
+	top: 35vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -357,7 +370,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 35vw;
-	top: 90vh;
+	top: 48vw;
 }
 
 #overlay5{
@@ -378,7 +391,7 @@ left: 90vw;*/
 	width: 15vw;
 	position: absolute;
 	left: 53vw;
-	top: 17vh;
+	top: 8.8vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -396,14 +409,13 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 53vw;
-	top: 46vh;
+	top: 24.5vw;
 }
 
 #overlay6{
 	width: 13vw;
 	height: 17.5vw;
 	position: absolute;
-	top: 20%;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -417,7 +429,7 @@ left: 90vw;*/
 	width: 13vw;
 	position: absolute;
 	left: 65vw;
-	top: 56.5vh;
+	top: 29.5vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -435,14 +447,13 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 65vw;
-	top: 90vh;
+	top: 47.5vw;
 }
 
 #overlay7{
 	width: 15vw;
 	height: 17.5vw;
 	position: absolute;
-	top: 20%;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -456,7 +467,7 @@ left: 90vw;*/
 	width: 15vw;
 	position: absolute;
 	left: 73vw;
-	top: 17vh;
+	top: 8.8vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -474,14 +485,13 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 73vw;
-	top: 46vh;
+	top: 24.2vw;
 }
 
 #overlay8{
-	width: 13vw;
-	height: 17.5vw;
+	width: 10vw;
+	height: 10vw;
 	position: absolute;
-	top: 20%;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -495,7 +505,7 @@ left: 90vw;*/
 	width: 10vw;
 	position: absolute;
 	left: 15vw;
-	top: 77vh;
+	top: 41vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -513,14 +523,13 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 15vw;
-	top: 96vh;
+	top: 51vw;
 }
 
 #overlay9{
 	width: 10vw;
 	height: 10vw;
 	position: absolute;
-	top: 20%;
 	background-color: #8c9389;
 	opacity: 0.6;
 	z-index: 1;
@@ -534,7 +543,7 @@ left: 90vw;*/
 	width: 10vw;
 	position: absolute;
 	left: 83vw;
-	top: 70.5vh;
+	top: 37.5vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -552,7 +561,7 @@ left: 90vw;*/
 	line-height: 1.5;
 	position: absolute;
 	left: 83vw;
-	top: 90vh;
+	top: 48vw;
 }
 
 #web{
@@ -567,7 +576,7 @@ left: 90vw;*/
 #overlay_dialogue{
 	position: absolute;
 	width: 22.5vw;
-	height: 24vh;
+	height: 13vw;
 	top: 0;
 	background-color: #8c9389;
 	opacity: 0.5;
@@ -580,7 +589,7 @@ left: 90vw;*/
 
 .dialogue{
 	position: absolute;
-	top: 15vh;
+	top: 8.8vw;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -596,14 +605,14 @@ left: 90vw;*/
 #dialogueText{
 	position: absolute;
 	left: 15vw;
-	top: 40vh;
+	top: 22vw;
 }
 
 #overlay_collection{
 	position: absolute;
-	width: 20.5vw;
-	height: 23.5vh;
 	left: 1vw;
+	width: 21.3vw;
+	height: 14vw;
 	top: 0;
 	background-color: #8c9389;
 	opacity: 0.5;
@@ -616,7 +625,7 @@ left: 90vw;*/
 
 .collection{
 	position: absolute;
-	top: 15vh;
+	top: 8.8vw;
 	left: 42vw;
 	filter: grayscale(100%);
 }
@@ -628,21 +637,19 @@ left: 90vw;*/
 #collection{
 	overflow: inherit;
 	width: 23vw;
-	height: 23.5vh;
+	height: 13vw;
 }
 
 #collectionText{
 	position: absolute;
-	left: 43.5vw;
-	top: 39.5vh;
+	left: 43vw;
+	top: 22vw;
 }
 
 #overlay_SOB{
 	position: absolute;
 	width: 13vw;
-	height: 45vh;
-	left: 0vw;
-	top: 0;
+	height: 23.2vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -654,7 +661,7 @@ left: 90vw;*/
 
 .SOB{
 	position: absolute;
-	top: 15vh;
+	top: 9vw;
 	left: 71vw;
 	filter: grayscale(100%);
 }
@@ -670,13 +677,13 @@ left: 90vw;*/
 #SOBText{
 	position: absolute;
 	left: 71vw;
-	top: 60vh;
+	top: 32.5vw;
 }
 
 #overlay_cdlecture{
 	position: absolute;
 	width: 22.5vw;
-	height: 22.7vh;
+	height: 12vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -688,7 +695,7 @@ left: 90vw;*/
 
 .cdlecture{
 	position: absolute;
-	top: 47vh;
+	top: 26.5vw;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -704,14 +711,14 @@ left: 90vw;*/
 #cdlectureText{
 	position: absolute;
 	left: 15vw;
-	top: 70.5vh;
+	top: 38.8vw;
 }
 
 #overlay_pie{
 	position: absolute;
-	width: 21vw;
-	left: 0.7vw;
-	height: 25vh;
+	width: 23vw;
+	left: 0vw;
+	height: 13vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -723,7 +730,7 @@ left: 90vw;*/
 
 .pie{
 	position: absolute;
-	top: 47vh;
+	top: 26vw;
 	left: 42.5vw;
 	filter: grayscale(100%);
 }
@@ -735,20 +742,20 @@ left: 90vw;*/
 #pie{
 	overflow: inherit;
 	width: 22.5vw;
-	height: 22.7vh;
+	height: 13vw;
 }
 
 #pieText{
 	position: absolute;
 	left: 43vw;
-	top: 70.5vh;
+	top: 39vw;
 }
 
 #overlay_studio{
 	position: absolute;
 	width: 22.5vw;
 	left: 0vw;
-	height: 23vh;
+	height: 12.5vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -760,7 +767,7 @@ left: 90vw;*/
 
 .studio{
 	position: absolute;
-	top: 75vh;
+	top: 41vw;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -772,20 +779,20 @@ left: 90vw;*/
 #studio{
 	overflow: inherit;
 	width: 22.5vw;
-	height: 22.7vh;
+	height: 12vw;
 }
 
 #studioText{
 	position: absolute;
 	left: 15vw;
-	top: 98vh;
+	top: 53.5vw;
 }
 
 #overlay_yt{
 	position: absolute;
 	width: 22.5vw;
 	left: 0vw;
-	height: 23vh;
+	height: 13vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -797,7 +804,7 @@ left: 90vw;*/
 
 .yt{
 	position: absolute;
-	top: 75vh;
+	top: 40.5vw;
 	left: 43vw;
 	filter: grayscale(100%);
 }
@@ -809,27 +816,27 @@ left: 90vw;*/
 #yt{
 	overflow: inherit;
 	width: 22.5vw;
-	height: 22.7vh;
+	height: 13vw;
 }
 
 #ytText{
 	position: absolute;
 	left: 43vw;
-	top: 98vh;
+	top: 53.5vw;
 }
 
 #arts{
 	position: absolute;
 	text-decoration: none;
-	top: 300vh;
+	top: 300%;
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 }
 
 .animation{
 	position: absolute;
-	top: 17vh;
+	top: 8.8vw;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -845,7 +852,7 @@ left: 90vw;*/
 #overlay_animation{
 	position: absolute;
 	width: 25vw;
-	height: 26.8vh;
+	height: 14.3vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -858,12 +865,12 @@ left: 90vw;*/
 #animationText{
 	position: absolute;
 	left: 15vw;
-	top: 44.5vh;
+	top: 23.5vw;
 }
 
 .CellBook{
 	position: absolute;
-	top: 17vh;
+	top: 8.8vw;
 	left: 45vw;
 	filter: grayscale(100%);
 }
@@ -874,8 +881,8 @@ left: 90vw;*/
 
 #overlay_CellBook{
 	position: absolute;
-	width: 14.5vw;
-	height: 27vh;
+	width: 14.7vw;
+	height: 14.2vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -893,12 +900,12 @@ left: 90vw;*/
 #CellBookText{
 	position: absolute;
 	left: 45vw;
-	top: 44.5vh;
+	top: 23.5vw;
 }
 
 .illustration{
 	position: absolute;
-	top: 17vh;
+	top: 8.8vw;
 	left: 64vw;
 	filter: grayscale(100%);
 }
@@ -910,7 +917,7 @@ left: 90vw;*/
 #overlay_illustration{
 	position: absolute;
 	width: 20vw;
-	height: 25vh;
+	height: 15vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -928,13 +935,13 @@ left: 90vw;*/
 #illustrationText{
 	position: absolute;
 	left: 64vw;
-	top: 44.5vh;
+	top: 23.5vw;
 }
 
 #overlay_forever{
 	position: absolute;
 	width: 21vw;
-	height: 27vh;
+	height: 14.2vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -951,7 +958,7 @@ left: 90vw;*/
 
 .forever{
 	position: absolute;
-	top: 53vh;
+	top: 28.5vw;
 	left: 15vw;
 	filter: grayscale(100%);
 }
@@ -963,13 +970,13 @@ left: 90vw;*/
 #foreverText{
 	position: absolute;
 	left: 15vw;
-	top: 80.5vh;
+	top: 43vw;
 	}
 
 #overlay_plaster{
 	position: absolute;
 	width: 21vw;
-	height: 27vh;
+	height: 14.2vw;
 	background-color: #8c9389;
 	opacity: 0.5;
 	z-index: 1;
@@ -986,7 +993,7 @@ left: 90vw;*/
 
 .plaster{
 	position: absolute;
-	top: 53vh;
+	top: 28.5vw;
 	left: 45vw;
 	filter: grayscale(100%);
 }
@@ -998,7 +1005,7 @@ left: 90vw;*/
 #plasterText{
 	position: absolute;
 	left: 45vw;
-	top: 80.5vh;
+	top: 43vw;
 	}
 
 #others{
@@ -1024,7 +1031,7 @@ left: 90vw;*/
 	width: 15vw;
 	position: absolute;
 	left: 15vw;
-	top: 17vh;
+	top: 8.8vw;
 	z-index: 0;
 	filter: grayscale(100%);
 }
@@ -1043,13 +1050,13 @@ left: 90vw;*/
 }
 
 .smalltext{
-	font-size: 12px;
+	font-size: 0.7vw;
 }
 
 #photographyText{
 	position: absolute;
 	left: 15vw;
-	top: 52.5vh;
+	top: 29vw;
 	line-height: 1.5;
 }
 
@@ -1065,7 +1072,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 <p3 class="portfolio"><span id="portfolioTitle">Portfolio</span>
 <ul class="list">
 <li><a href="#graphics">Graphic/Prints</a></li>
-<li><a href="#web">Web/Interactive</a></li>
+<li><a href="#web">Web/Interaction</a></li>
 <li><a href="#arts">Arts</a></li>
 <li><a href="#others">Others</a></li>
 </ul>
@@ -1080,7 +1087,7 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 	<div id="subtitle">Graphics</div>
 	<span class="sidebar">
 		<div id="homepage_sidebar"><a href="#homepage">Homepage</a></div>
-		<div id="web_sidebar"><a href="#web">Web/Interactive</a></div>
+		<div id="web_sidebar"><a href="#web">Web/Interaction</a></div>
 		<div id="arts_sidebar"><a href="#arts">Arts</a></div>
 		<div id="others_sidebar"><a href="#others">Others</a></div>
 		
@@ -1222,8 +1229,8 @@ currently attending Parsons</br> the New School for Design, in her junior year. 
 		<span class="sidebar">
 		<div id="homepage_sidebar"><a href="#homepage">Homepage</a></div>
 		<div id="graphics_sidebar"><a href="#graphics">Graphics</a></div>
-		<div id="web_sidebar_2"><a href="#web">Web/Interactive</a></div>
-		<div id="others_sidebar"><a href="#others">Others</a></div>
+		<div id="web_sidebar_2"><a href="#web">Web/Interaction</a></div>
+		<div id="others_sidebar_2"><a href="#others">Others</a></div>
 		</span>
 
 		<a href="theman.html">
